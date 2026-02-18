@@ -77,6 +77,7 @@ describe('catalog helpers', () => {
     expect(slugs.has('moltbook')).toBe(true);
     expect(slugs.has('mimiclaw')).toBe(true);
     expect(slugs.has('kimiclaw')).toBe(true);
+    expect(slugs.has('clawlet')).toBe(true);
   });
 
   it('builds project static paths across locales and slugs', () => {

@@ -1068,5 +1068,71 @@
       "https://x.com/Kimi_Moonshot"
     ],
     "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "variant-clawlet",
+    "slug": "clawlet",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "github": "https://github.com/mosaxiv/clawlet"
+    },
+    "metrics": {
+      "stars": 653,
+      "footprint": "single binary, no CGO/runtime/dependencies"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "Clawlet",
+        "summary": "Go 实现的超轻量个人 AI 助手，对标 OpenClaw/Nanobot 路线。",
+        "whatItIs": "一个单二进制分发的个人 agent 项目，内置 SQLite + sqlite-vec 语义记忆检索。",
+        "whatItClaims": "强调 Single Binary、No CGO、No Runtime、No Dependencies 的轻部署能力。",
+        "whereItShines": "适合本地优先、快速落地和资源受限环境的个人助手场景。",
+        "limitations": "项目较新，生态和长期稳定性仍需持续观察；官方链接目前以 GitHub 为主。",
+        "editorialTake": "如果你想要“拿来即跑”的轻量方案，Clawlet 是值得关注的新选项。",
+        "tags": [
+          "go",
+          "single-binary",
+          "memory-search"
+        ]
+      },
+      "en": {
+        "name": "Clawlet",
+        "summary": "A Go-based ultra-light personal AI assistant inspired by OpenClaw/Nanobot.",
+        "whatItIs": "A single-binary personal agent with bundled SQLite + sqlite-vec semantic memory search.",
+        "whatItClaims": "Markets a deployment model of Single Binary, No CGO, No Runtime, and No Dependencies.",
+        "whereItShines": "Strong fit for local-first usage, fast setup, and constrained runtime environments.",
+        "limitations": "Still an early project; ecosystem breadth and long-term stability need ongoing validation.",
+        "editorialTake": "A promising lightweight option if your priority is minimal deployment overhead.",
+        "tags": [
+          "go",
+          "single-binary",
+          "memory-search"
+        ]
+      },
+      "ja": {
+        "name": "Clawlet",
+        "summary": "OpenClaw/Nanobot 系に着想を得た、Go 製の超軽量パーソナル AI アシスタントです。",
+        "whatItIs": "SQLite + sqlite-vec を同梱した単一バイナリ配布の個人向けエージェント実装です。",
+        "whatItClaims": "Single Binary、No CGO、No Runtime、No Dependencies を前面に出しています。",
+        "whereItShines": "ローカル優先運用、素早い導入、低リソース環境での利用に向いています。",
+        "limitations": "新しいプロジェクトのため、エコシステム規模や継続安定性は検証継続が必要です。",
+        "editorialTake": "導入コストを最小化したい用途では有力な候補です。",
+        "tags": [
+          "go",
+          "single-binary",
+          "memory-search"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/mosaxiv/clawlet",
+      "https://github.com/mosaxiv/clawlet#readme"
+    ],
+    "updatedAt": "2026-02-18"
   }
 ]
