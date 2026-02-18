@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "siteName": "OpenClawIndex",
+    "defaultDescription": "OpenClaw 变种与相关服务多语言内容一览。"
+  },
+  "nav": {
+    "variants": "变种",
+    "services": "服务",
+    "methodology": "方法论",
+    "changelog": "更新记录"
+  },
+  "common": {
+    "language": "语言",
+    "view": "视图",
+    "facts": "Facts",
+    "opinions": "Opinions",
+    "search": "搜索",
+    "searchPlaceholder": "按名称、标签、描述搜索",
+    "filterCategory": "分类",
+    "allCategories": "全部分类",
+    "sortBy": "排序",
+    "sortName": "名称",
+    "sortCategory": "分类",
+    "sortStars": "GitHub Stars",
+    "sortUpdatedAt": "更新时间",
+    "open": "打开",
+    "details": "详情",
+    "evidence": "证据",
+    "updatedAt": "更新时间",
+    "noResults": "没有匹配结果",
+    "viewFacts": "事实层",
+    "viewOpinions": "观点层",
+    "backToList": "返回目录"
+  },
+  "home": {
+    "title": "OpenClaw 变种图鉴",
+    "subtitle": "OpenClaw 变种 + 相关服务内容总览（事实与观点双层视图）",
+    "description": "首版支持中文、英文、日文。默认展示事实层，切换到观点层可查看编辑立场。",
+    "ctaVariants": "进入变种目录",
+    "ctaServices": "进入服务目录",
+    "quick": "快速入口",
+    "localeCards": {
+      "zh-CN": "中文",
+      "en": "English",
+      "ja": "日本語"
+    }
+  },
+  "directory": {
+    "variantsTitle": "OpenClaw 变种一览",
+    "variantsSubtitle": "精选变种总览，含 Satire/Fake 分区。",
+    "servicesTitle": "相关服务一览",
+    "servicesSubtitle": "收录安全、基础设施、托管与硬件生态。",
+    "columns": {
+      "project": "项目",
+      "category": "分类",
+      "description": "描述",
+      "website": "链接",
+      "stars": "Stars",
+      "action": "操作"
+    }
+  },
+  "categories": {
+    "Rewrites": "Rewrites",
+    "Security": "Security",
+    "Infrastructure": "Infrastructure",
+    "Hosting": "Hosting",
+    "DesktopHardware": "Desktop & Hardware",
+    "Ecosystem": "Ecosystem",
+    "SatireFake": "Satire/Fake"
+  },
+  "stance": {
+    "recommended": "推荐",
+    "neutral": "中立",
+    "not_recommended": "不推荐",
+    "high": "高置信",
+    "medium": "中置信",
+    "low": "低置信"
+  },
+  "project": {
+    "whatItIs": "What it is",
+    "whatItClaims": "What it claims",
+    "whereItShines": "Where it shines",
+    "limitations": "Limitations",
+    "editorialTake": "Editorial take",
+    "links": "Links",
+    "tags": "Tags"
+  },
+  "methodology": {
+    "title": "收录方法论",
+    "intro": "本目录将信息拆分为事实层与观点层，减少信息噪音并提升可追溯性。",
+    "rules": [
+      "事实层只写可验证描述，并附证据链接。",
+      "观点层明确标注编辑立场，避免伪装成客观结论。",
+      "每个条目至少包含 1 条可验证来源。",
+      "Satire/Fake 分区用于表达明显的讽刺或实验性项目定位。"
+    ],
+    "disclaimer": "本网站不构成投资建议或安全保证，所有结论请结合你自己的测试环境独立验证。"
+  },
+  "changelog": {
+    "title": "更新记录",
+    "intro": "展示当前收录规则和目录变更。",
+    "entries": [
+      "2026-02-18: 首版上线，支持中英日三语与 Facts/Opinions 双层视图。",
+      "2026-02-18: 收录核心变种与精选服务条目。",
+      "2026-02-18: 增加方法论页面，明确事实与观点分离规则。"
+    ]
+  }
+}

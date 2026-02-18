@@ -1,11 +1,15 @@
 ---
-import HomePage from '../components/HomePage.astro';
-import { buildLocaleHomepageHref, getItemsByKind } from '../lib/catalog';
-import { getMessages } from '../lib/i18n';
-import { LOCALES, type Locale } from '../types/catalog';
-import '../styles/global.css';
+import HomePage from '../../components/HomePage.astro';
+import { assertLocale, buildLocaleHomepageHref, getItemsByKind, getLocaleStaticPaths } from '../../lib/catalog';
+import { getMessages } from '../../lib/i18n';
+import { LOCALES, type Locale } from '../../types/catalog';
+import '../../styles/global.css';
 
-const locale: Locale = 'en';
+export function getStaticPaths() {
+  return getLocaleStaticPaths();
+}
+
+const locale = assertLocale(Astro.params.locale);
 const messages = getMessages(locale);
 const variants = getItemsByKind('variant');
 const services = getItemsByKind('service');

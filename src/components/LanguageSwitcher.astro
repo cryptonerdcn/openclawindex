@@ -1,0 +1,30 @@
+---
+import { replaceLocaleInPath } from '../lib/catalog';
+import { LOCALES, type Locale } from '../types/catalog';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+
+const localeNames: Record<Locale, string> = {
+  'zh-CN': '中文',
+  en: 'EN',
+  ja: '日本語',
+};
+---
+
+<nav class="language-switcher" aria-label="language switcher">
+  {
+    LOCALES.map((nextLocale) => (
+      <a
+        href={replaceLocaleInPath(currentPath, nextLocale)}
+        aria-current={nextLocale === locale ? 'true' : 'false'}
+      >
+        {localeNames[nextLocale]}
+      </a>
+    ))
+  }
+</nav>

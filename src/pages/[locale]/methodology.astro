@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { assertLocale, getLocaleStaticPaths } from '../../lib/catalog';
+import { getMessages } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths();
+}
+
+const locale = assertLocale(Astro.params.locale);
+const messages = getMessages(locale);
+---
+
+<BaseLayout
+  title={`${messages.methodology.title} · ${messages.meta.siteName}`}
+  description={messages.methodology.intro}
+  locale={locale}
+  currentPath={Astro.url.pathname}
+  messages={messages}
+>
+  <section class="hero">
+    <h1>{messages.methodology.title}</h1>
+    <p>{messages.methodology.intro}</p>
+  </section>
+
+  <section class="project-grid">
+    <article>
+      <h3>Rules</h3>
+      <ol>
+        {messages.methodology.rules.map((rule) => <li>{rule}</li>)}
+      </ol>
+    </article>
+
+    <article>
+      <h3>Disclaimer</h3>
+      <p>{messages.methodology.disclaimer}</p>
+    </article>
+  </section>
+</BaseLayout>

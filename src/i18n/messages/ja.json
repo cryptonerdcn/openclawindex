@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "siteName": "OpenClawIndex",
+    "defaultDescription": "OpenClaw 変種と関連サービスの多言語ディレクトリ。"
+  },
+  "nav": {
+    "variants": "変種",
+    "services": "サービス",
+    "methodology": "方法論",
+    "changelog": "更新履歴"
+  },
+  "common": {
+    "language": "言語",
+    "view": "表示",
+    "facts": "Facts",
+    "opinions": "Opinions",
+    "search": "検索",
+    "searchPlaceholder": "名前、タグ、説明で検索",
+    "filterCategory": "カテゴリ",
+    "allCategories": "すべてのカテゴリ",
+    "sortBy": "並び替え",
+    "sortName": "名前",
+    "sortCategory": "カテゴリ",
+    "sortStars": "GitHub Stars",
+    "sortUpdatedAt": "更新日",
+    "open": "開く",
+    "details": "詳細",
+    "evidence": "根拠",
+    "updatedAt": "更新日",
+    "noResults": "一致する結果がありません",
+    "viewFacts": "事実レイヤー",
+    "viewOpinions": "意見レイヤー",
+    "backToList": "一覧へ戻る"
+  },
+  "home": {
+    "title": "OpenClaw 変種図鑑",
+    "subtitle": "OpenClaw 変種と関連サービスの総覧",
+    "description": "初期表示は事実レイヤーです。意見レイヤーに切り替えると編集視点を確認できます。",
+    "ctaVariants": "変種一覧へ",
+    "ctaServices": "サービス一覧へ",
+    "quick": "クイックリンク",
+    "localeCards": {
+      "zh-CN": "中国語",
+      "en": "英語",
+      "ja": "日本語"
+    }
+  },
+  "directory": {
+    "variantsTitle": "OpenClaw 変種一覧",
+    "variantsSubtitle": "Satire/Fake を含む厳選変種一覧。",
+    "servicesTitle": "関連サービス一覧",
+    "servicesSubtitle": "セキュリティ、インフラ、ホスティング、ハードウェアを収録。",
+    "columns": {
+      "project": "プロジェクト",
+      "category": "カテゴリ",
+      "description": "説明",
+      "website": "リンク",
+      "stars": "Stars",
+      "action": "操作"
+    }
+  },
+  "categories": {
+    "Rewrites": "Rewrites",
+    "Security": "Security",
+    "Infrastructure": "Infrastructure",
+    "Hosting": "Hosting",
+    "DesktopHardware": "Desktop & Hardware",
+    "Ecosystem": "Ecosystem",
+    "SatireFake": "Satire/Fake"
+  },
+  "stance": {
+    "recommended": "推奨",
+    "neutral": "中立",
+    "not_recommended": "非推奨",
+    "high": "高信頼",
+    "medium": "中信頼",
+    "low": "低信頼"
+  },
+  "project": {
+    "whatItIs": "What it is",
+    "whatItClaims": "What it claims",
+    "whereItShines": "Where it shines",
+    "limitations": "Limitations",
+    "editorialTake": "Editorial take",
+    "links": "Links",
+    "tags": "Tags"
+  },
+  "methodology": {
+    "title": "方法論",
+    "intro": "このディレクトリは事実と意見を分離し、検証可能性と透明性を保ちます。",
+    "rules": [
+      "事実レイヤーは検証可能な内容と出典リンクのみを掲載します。",
+      "意見レイヤーは編集的見解として明確に表示します。",
+      "各項目に最低 1 件の根拠リンクを必須とします。",
+      "Satire/Fake は風刺または実験的な位置付けの項目に使用します。"
+    ],
+    "disclaimer": "本サイトは投資・法務・セキュリティの助言ではありません。必ず自環境で検証してください。"
+  },
+  "changelog": {
+    "title": "更新履歴",
+    "intro": "収録内容と編集ルールの更新履歴です。",
+    "entries": [
+      "2026-02-18: 初版公開。中国語・英語・日本語を提供。",
+      "2026-02-18: Facts/Opinions の二層表示を実装。",
+      "2026-02-18: 方法論ページを追加し、根拠と編集ルールを明文化。"
+    ]
+  }
+}

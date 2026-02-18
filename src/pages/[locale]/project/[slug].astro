@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { assertLocale, getProjectStaticPaths } from '../../../lib/catalog';
+import { getMessages } from '../../../lib/i18n';
+import type { CatalogItem, Locale } from '../../../types/catalog';
+
+export function getStaticPaths() {
+  return getProjectStaticPaths();
+}
+
+const locale = assertLocale(Astro.params.locale);
+const item = Astro.props.item as CatalogItem;
+const pathLocale = Astro.props.locale as Locale;
+const messages = getMessages(locale);
+
+if (pathLocale !== locale) {
+  throw new Error(`Locale mismatch for project page: expected ${locale}, got ${pathLocale}`);
+}
+
+const content = item.locales[locale];
+const backLink = item.kind === 'variant' ? `/${locale}/variants` : `/${locale}/services`;
+---
+
+<BaseLayout
+  title={`${content.name} · ${messages.meta.siteName}`}
+  description={content.summary}
+  locale={locale}
+  currentPath={Astro.url.pathname}
+  messages={messages}
+>
+  <section class="hero">
+    <a class="button secondary" href={backLink}>{messages.common.backToList}</a>
+    <h1 style="margin-top: 0.8rem;">{content.name}</h1>
+    <p>{content.summary}</p>
+    <p class="muted" style="margin-top: 0.5rem;">
+      {messages.common.updatedAt}: {item.updatedAt} · {messages.common.evidence}: {item.evidence.length}
+    </p>
+  </section>
+
+  <section class="project-grid">
+    <article>
+      <h3>{messages.project.whatItIs}</h3>
+      <p>{content.whatItIs}</p>
+    </article>
+
+    <article>
+      <h3>{messages.project.whatItClaims}</h3>
+      <p>{content.whatItClaims}</p>
+    </article>
+
+    <article>
+      <h3>{messages.project.whereItShines}</h3>
+      <p>{content.whereItShines}</p>
+    </article>
+
+    <article>
+      <h3>{messages.project.limitations}</h3>
+      <p>{content.limitations}</p>
+    </article>
+
+    <article>
+      <h3>{messages.project.editorialTake}</h3>
+      <p>{content.editorialTake}</p>
+      <p class="muted" style="margin-top: 0.5rem;">
+        {messages.stance[item.stance.recommendation]} · {messages.stance[item.stance.confidence]}
+      </p>
+    </article>
+
+    <article>
+      <h3>{messages.project.links}</h3>
+      <ul>
+        {item.links.website && (
+          <li>
+            <a href={item.links.website} target="_blank" rel="noopener noreferrer">
+              Website
+            </a>
+          </li>
+        )}
+        {item.links.github && (
+          <li>
+            <a href={item.links.github} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </li>
+        )}
+        {item.links.x && (
+          <li>
+            <a href={item.links.x} target="_blank" rel="noopener noreferrer">
+              X
+            </a>
+          </li>
+        )}
+      </ul>
+    </article>
+
+    <article>
+      <h3>{messages.project.tags}</h3>
+      <p>{content.tags.join(' · ')}</p>
+    </article>
+
+    <article>
+      <h3>{messages.common.evidence}</h3>
+      <ul>
+        {item.evidence.map((source) => (
+          <li>
+            <a href={source} target="_blank" rel="noopener noreferrer">
+              {source}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </article>
+  </section>
+</BaseLayout>

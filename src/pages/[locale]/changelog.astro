@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { assertLocale, getLastUpdatedDate, getLocaleStaticPaths } from '../../lib/catalog';
+import { getMessages } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths();
+}
+
+const locale = assertLocale(Astro.params.locale);
+const messages = getMessages(locale);
+const lastUpdated = getLastUpdatedDate();
+---
+
+<BaseLayout
+  title={`${messages.changelog.title} · ${messages.meta.siteName}`}
+  description={messages.changelog.intro}
+  locale={locale}
+  currentPath={Astro.url.pathname}
+  messages={messages}
+>
+  <section class="hero">
+    <h1>{messages.changelog.title}</h1>
+    <p>{messages.changelog.intro}</p>
+    <p>
+      <strong>{messages.common.updatedAt}:</strong>
+      {lastUpdated}
+    </p>
+  </section>
+
+  <section class="project-grid">
+    <article>
+      <h3>Entries</h3>
+      <ul>
+        {messages.changelog.entries.map((entry) => <li>{entry}</li>)}
+      </ul>
+    </article>
+  </section>
+</BaseLayout>

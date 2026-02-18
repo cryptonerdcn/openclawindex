@@ -1,0 +1,24 @@
+---
+import DirectoryView from '../../components/DirectoryView.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { assertLocale, getItemsByKind, getLocaleStaticPaths } from '../../lib/catalog';
+import { getMessages } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths();
+}
+
+const locale = assertLocale(Astro.params.locale);
+const messages = getMessages(locale);
+const items = getItemsByKind('variant');
+---
+
+<BaseLayout
+  title={`${messages.directory.variantsTitle} · ${messages.meta.siteName}`}
+  description={messages.meta.defaultDescription}
+  locale={locale}
+  currentPath={Astro.url.pathname}
+  messages={messages}
+>
+  <DirectoryView locale={locale} kind="variant" items={items} messages={messages} />
+</BaseLayout>

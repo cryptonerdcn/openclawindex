@@ -1,0 +1,88 @@
+---
+import DirectoryView from './DirectoryView.astro';
+import type { SiteMessages } from '../lib/i18n';
+import { LOCALES, type CatalogItem, type Locale } from '../types/catalog';
+
+interface Props {
+  locale: Locale;
+  messages: SiteMessages;
+  variants: CatalogItem[];
+  services: CatalogItem[];
+  languageLinks: Record<Locale, string>;
+}
+
+const { locale, messages, variants, services, languageLinks } = Astro.props;
+
+const localeLabels: Record<Locale, string> = {
+  'zh-CN': '中',
+  en: 'EN',
+  ja: '日',
+};
+---
+
+<header class="top-nav">
+  <div class="container top-nav-inner">
+    <a class="brand" href="#top">OpenClawIndex</a>
+    <div class="top-actions">
+      <nav class="anchor-nav">
+        <a href="#variants">{messages.nav.variants}</a>
+        <a href="#services">{messages.nav.services}</a>
+        <a href="#methodology">{messages.nav.methodology}</a>
+      </nav>
+      <nav class="lang-inline" aria-label="language switcher">
+        {
+          LOCALES.map((option) => (
+            <a class="lang-mini" href={languageLinks[option]} aria-current={option === locale ? 'true' : 'false'}>
+              {localeLabels[option]}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="container page-shell">
+  <section id="top" class="hero fade-in">
+    <p class="eyebrow">OPENCLAW DIRECTORY</p>
+    <h1>{messages.home.title}</h1>
+    <p>{messages.home.subtitle}</p>
+    <p>{messages.home.description}</p>
+    <div class="quick-links">
+      <a class="button" href="#variants">{messages.nav.variants}</a>
+      <a class="button secondary" href="#services">{messages.nav.services}</a>
+      <a class="button secondary" href="#methodology">{messages.nav.methodology}</a>
+    </div>
+  </section>
+
+  <section id="variants" class="section-block fade-in">
+    <DirectoryView locale={locale} kind="variant" items={variants} messages={messages} />
+  </section>
+
+  <section id="services" class="section-block fade-in">
+    <DirectoryView locale={locale} kind="service" items={services} messages={messages} />
+  </section>
+
+  <section id="methodology" class="panel section-block fade-in">
+    <div class="panel-header">
+      <h2>{messages.methodology.title}</h2>
+      <p>{messages.methodology.intro}</p>
+    </div>
+    <div class="project-grid">
+      <article>
+        <h3>Rules</h3>
+        <ol>
+          {messages.methodology.rules.map((rule) => <li>{rule}</li>)}
+        </ol>
+      </article>
+      <article>
+        <h3>Disclaimer</h3>
+        <p>{messages.methodology.disclaimer}</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">OpenClawIndex · Red/Black static single-page directory.</div>
+</footer>

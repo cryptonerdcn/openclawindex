@@ -1,0 +1,316 @@
+---
+import type { SiteMessages } from '../lib/i18n';
+import { CATEGORIES, type CatalogItem, type Locale } from '../types/catalog';
+
+interface Props {
+  locale: Locale;
+  kind: CatalogItem['kind'];
+  items: CatalogItem[];
+  messages: SiteMessages;
+}
+
+const { locale, kind, items, messages } = Astro.props;
+
+const sectionTitle =
+  kind === 'variant' ? messages.directory.variantsTitle : messages.directory.servicesTitle;
+const sectionSubtitle =
+  kind === 'variant' ? messages.directory.variantsSubtitle : messages.directory.servicesSubtitle;
+
+const clientItems = items.map((item) => ({
+  slug: item.slug,
+  name: item.locales[locale].name,
+  summary: item.locales[locale].summary,
+  editorialTake: item.locales[locale].editorialTake,
+  tags: item.locales[locale].tags,
+  category: item.category,
+  website: item.links.website ?? null,
+  github: item.links.github ?? null,
+  x: item.links.x ?? null,
+  stars: item.metrics.stars ?? null,
+  updatedAt: item.updatedAt,
+  stanceRecommendation: item.stance.recommendation,
+  stanceConfidence: item.stance.confidence,
+  evidenceCount: item.evidence.length,
+}));
+---
+
+<section class="panel">
+  <div class="panel-header">
+    <h2>{sectionTitle}</h2>
+    <p>{sectionSubtitle}</p>
+  </div>
+
+  <div class="toolbar">
+    <div>
+      <label>{messages.common.view}</label>
+      <div class="view-toggle" data-role="view-toggle">
+        <button type="button" data-value="facts">{messages.common.facts}</button>
+        <button type="button" data-value="opinions">{messages.common.opinions}</button>
+      </div>
+    </div>
+
+    <div>
+      <label for={`search-${kind}`}>{messages.common.search}</label>
+      <input id={`search-${kind}`} type="search" placeholder={messages.common.searchPlaceholder} data-role="q" />
+    </div>
+
+    <div>
+      <label for={`category-${kind}`}>{messages.common.filterCategory}</label>
+      <select id={`category-${kind}`} data-role="category">
+        <option value="all">{messages.common.allCategories}</option>
+        {
+          CATEGORIES.map((category) => (
+            <option value={category}>{messages.categories[category]}</option>
+          ))
+        }
+      </select>
+    </div>
+
+    <div>
+      <label for={`sort-${kind}`}>{messages.common.sortBy}</label>
+      <select id={`sort-${kind}`} data-role="sort">
+        <option value="stars">{messages.common.sortStars}</option>
+        <option value="updatedAt">{messages.common.sortUpdatedAt}</option>
+        <option value="name">{messages.common.sortName}</option>
+        <option value="category">{messages.common.sortCategory}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="catalog-table">
+      <thead>
+        <tr>
+          <th>{messages.directory.columns.project}</th>
+          <th>{messages.directory.columns.category}</th>
+          <th>{messages.directory.columns.description}</th>
+          <th>{messages.directory.columns.website}</th>
+          <th>{messages.directory.columns.stars}</th>
+          <th>{messages.directory.columns.action}</th>
+        </tr>
+      </thead>
+      <tbody data-role="table-body"></tbody>
+    </table>
+  </div>
+
+  <div class="card-grid" data-role="card-body"></div>
+  <p class="muted" data-role="empty-state" style="padding: 0 1.2rem 1.2rem; display: none;">
+    {messages.common.noResults}
+  </p>
+</section>
+
+<script
+  is:inline
+  define:vars={{
+    locale,
+    items: clientItems,
+    categoryLabels: messages.categories,
+    stanceLabels: messages.stance,
+    labels: {
+      open: messages.common.open,
+      evidence: messages.common.evidence,
+      updatedAt: messages.common.updatedAt,
+    },
+  }}
+>
+  (() => {
+    const script = document.currentScript;
+    if (!(script instanceof HTMLScriptElement)) return;
+
+    const root = script.previousElementSibling;
+    if (!(root instanceof HTMLElement)) return;
+
+    const tbody = root.querySelector('[data-role=\"table-body\"]');
+    const cardBody = root.querySelector('[data-role=\"card-body\"]');
+    const empty = root.querySelector('[data-role=\"empty-state\"]');
+    if (!tbody || !cardBody || !empty) return;
+
+    const searchInput = root.querySelector('[data-role="q"]');
+    const categorySelect = root.querySelector('[data-role="category"]');
+    const sortSelect = root.querySelector('[data-role="sort"]');
+    const viewButtons = root.querySelectorAll('[data-role="view-toggle"] button');
+
+    if (!searchInput || !categorySelect || !sortSelect) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const state = {
+      view: params.get('view') === 'opinions' ? 'opinions' : 'facts',
+      q: params.get('q') ?? '',
+      category: params.get('category') ?? 'all',
+      sort: params.get('sort') ?? 'stars',
+    };
+
+    const allowedSorts = new Set(['name', 'category', 'stars', 'updatedAt']);
+    if (!allowedSorts.has(state.sort)) {
+      state.sort = 'stars';
+    }
+
+    searchInput.value = state.q;
+    categorySelect.value = state.category;
+    sortSelect.value = state.sort;
+
+    function updateViewButtons() {
+      viewButtons.forEach((button) => {
+        const pressed = button.dataset.value === state.view;
+        button.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+      });
+    }
+
+    function applyQuery() {
+      const next = new URLSearchParams(window.location.search);
+
+      if (state.view === 'facts') next.delete('view');
+      else next.set('view', state.view);
+
+      if (!state.q.trim()) next.delete('q');
+      else next.set('q', state.q.trim());
+
+      if (state.category === 'all') next.delete('category');
+      else next.set('category', state.category);
+
+      if (state.sort === 'stars') next.delete('sort');
+      else next.set('sort', state.sort);
+
+      const query = next.toString();
+      const url = query ? `${window.location.pathname}?${query}` : window.location.pathname;
+      history.replaceState({}, '', url);
+    }
+
+    function normalizedText(text) {
+      return text.toLowerCase();
+    }
+
+    function sortItems(list) {
+      return [...list].sort((a, b) => {
+        switch (state.sort) {
+          case 'name':
+            return a.name.localeCompare(b.name);
+          case 'category':
+            return a.category.localeCompare(b.category);
+          case 'updatedAt':
+            return b.updatedAt.localeCompare(a.updatedAt);
+          case 'stars':
+          default:
+            return (b.stars ?? -1) - (a.stars ?? -1);
+        }
+      });
+    }
+
+    function filterItems() {
+      const query = normalizedText(state.q.trim());
+      const filtered = items.filter((item) => {
+        if (state.category !== 'all' && item.category !== state.category) {
+          return false;
+        }
+
+        if (!query) {
+          return true;
+        }
+
+        const source = [item.name, item.summary, item.editorialTake, item.tags.join(' ')].join(' ');
+        return normalizedText(source).includes(query);
+      });
+
+      return sortItems(filtered);
+    }
+
+    function itemDescription(item) {
+      if (state.view === 'facts') {
+        return item.summary;
+      }
+
+      const recommendation = stanceLabels[item.stanceRecommendation] ?? item.stanceRecommendation;
+      const confidence = stanceLabels[item.stanceConfidence] ?? item.stanceConfidence;
+      return `[${recommendation} / ${confidence}] ${item.editorialTake}`;
+    }
+
+    function linkHTML(url, text) {
+      if (!url) {
+        return '<span class="muted">-</span>';
+      }
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+    }
+
+    function render() {
+      const list = filterItems();
+      tbody.innerHTML = '';
+      cardBody.innerHTML = '';
+
+      if (list.length === 0) {
+        empty.style.display = 'block';
+        return;
+      }
+
+      empty.style.display = 'none';
+
+      for (const item of list) {
+        const category = categoryLabels[item.category] ?? item.category;
+        const description = itemDescription(item);
+        const stars = item.stars == null ? '-' : String(item.stars);
+        const primaryLink = item.website ?? item.github ?? item.x;
+        const primaryLabel = item.website ? 'Website' : item.github ? 'GitHub' : 'X';
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td><strong>${item.name}</strong></td>
+          <td><span class="category-pill">${category}</span></td>
+          <td class="muted">${description}</td>
+          <td class="muted">${linkHTML(item.website ?? item.github ?? item.x, item.website ?? item.github ?? item.x ?? '-')}</td>
+          <td>${stars}</td>
+          <td>${primaryLink ? `<a class="button secondary" href="${primaryLink}" target="_blank" rel="noopener noreferrer">${labels.open}</a>` : '<span class="muted">-</span>'}</td>
+        `;
+        tbody.appendChild(row);
+
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.innerHTML = `
+          <h3>${item.name}</h3>
+          <span class="category-pill">${category}</span>
+          <p class="row muted">${description}</p>
+          <p class="row muted">${labels.updatedAt}: ${item.updatedAt} · ${labels.evidence}: ${item.evidenceCount}</p>
+          <div class="links">
+            ${primaryLink ? `<a class="button secondary" href="${primaryLink}" target="_blank" rel="noopener noreferrer">${labels.open} ${primaryLabel}</a>` : ''}
+            ${item.website ? `<a class="button secondary" href="${item.website}" target="_blank" rel="noopener noreferrer">Web</a>` : ''}
+            ${item.github ? `<a class="button secondary" href="${item.github}" target="_blank" rel="noopener noreferrer">GitHub</a>` : ''}
+            ${item.x ? `<a class="button secondary" href="${item.x}" target="_blank" rel="noopener noreferrer">X</a>` : ''}
+          </div>
+        `;
+        cardBody.appendChild(card);
+      }
+    }
+
+    searchInput.addEventListener('input', () => {
+      state.q = searchInput.value;
+      applyQuery();
+      render();
+    });
+
+    categorySelect.addEventListener('change', () => {
+      state.category = categorySelect.value;
+      applyQuery();
+      render();
+    });
+
+    sortSelect.addEventListener('change', () => {
+      state.sort = sortSelect.value;
+      applyQuery();
+      render();
+    });
+
+    viewButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const next = button.dataset.value;
+        if (next !== 'facts' && next !== 'opinions') {
+          return;
+        }
+        state.view = next;
+        updateViewButtons();
+        applyQuery();
+        render();
+      });
+    });
+
+    updateViewButtons();
+    render();
+  })();
+</script>

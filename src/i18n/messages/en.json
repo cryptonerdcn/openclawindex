@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "siteName": "OpenClawIndex",
+    "defaultDescription": "Multilingual overview of OpenClaw variants and related services."
+  },
+  "nav": {
+    "variants": "Variants",
+    "services": "Services",
+    "methodology": "Methodology",
+    "changelog": "Changelog"
+  },
+  "common": {
+    "language": "Language",
+    "view": "View",
+    "facts": "Facts",
+    "opinions": "Opinions",
+    "search": "Search",
+    "searchPlaceholder": "Search by name, tags, and description",
+    "filterCategory": "Category",
+    "allCategories": "All categories",
+    "sortBy": "Sort",
+    "sortName": "Name",
+    "sortCategory": "Category",
+    "sortStars": "GitHub Stars",
+    "sortUpdatedAt": "Updated",
+    "open": "Open",
+    "details": "Details",
+    "evidence": "Evidence",
+    "updatedAt": "Updated",
+    "noResults": "No matching results",
+    "viewFacts": "Facts layer",
+    "viewOpinions": "Opinion layer",
+    "backToList": "Back to directory"
+  },
+  "home": {
+    "title": "OpenClaw Variant Atlas",
+    "subtitle": "OpenClaw variants + related services with dual-layer reading",
+    "description": "Default view is neutral facts. Switch to opinion layer to read editorial takes.",
+    "ctaVariants": "Browse variants",
+    "ctaServices": "Browse services",
+    "quick": "Quick links",
+    "localeCards": {
+      "zh-CN": "Chinese",
+      "en": "English",
+      "ja": "Japanese"
+    }
+  },
+  "directory": {
+    "variantsTitle": "OpenClaw Variant Directory",
+    "variantsSubtitle": "Curated variants, including Satire/Fake entries.",
+    "servicesTitle": "Related Services Directory",
+    "servicesSubtitle": "Security, infrastructure, hosting, and hardware ecosystem projects.",
+    "columns": {
+      "project": "Project",
+      "category": "Category",
+      "description": "Description",
+      "website": "Links",
+      "stars": "Stars",
+      "action": "Action"
+    }
+  },
+  "categories": {
+    "Rewrites": "Rewrites",
+    "Security": "Security",
+    "Infrastructure": "Infrastructure",
+    "Hosting": "Hosting",
+    "DesktopHardware": "Desktop & Hardware",
+    "Ecosystem": "Ecosystem",
+    "SatireFake": "Satire/Fake"
+  },
+  "stance": {
+    "recommended": "Recommended",
+    "neutral": "Neutral",
+    "not_recommended": "Not recommended",
+    "high": "High confidence",
+    "medium": "Medium confidence",
+    "low": "Low confidence"
+  },
+  "project": {
+    "whatItIs": "What it is",
+    "whatItClaims": "What it claims",
+    "whereItShines": "Where it shines",
+    "limitations": "Limitations",
+    "editorialTake": "Editorial take",
+    "links": "Links",
+    "tags": "Tags"
+  },
+  "methodology": {
+    "title": "Methodology",
+    "intro": "The directory separates facts from opinions to keep content verifiable and transparent.",
+    "rules": [
+      "Facts layer only includes verifiable statements with source links.",
+      "Opinion layer is explicitly marked as editorial perspective.",
+      "Each item must have at least one evidence source.",
+      "Satire/Fake category is used for satirical or intentionally experimental positioning."
+    ],
+    "disclaimer": "This website is not investment, legal, or security advice. Validate claims in your own environment."
+  },
+  "changelog": {
+    "title": "Changelog",
+    "intro": "Tracking major updates to the directory and editorial framework.",
+    "entries": [
+      "2026-02-18: Initial launch with zh-CN, en, and ja locales.",
+      "2026-02-18: Added dual-layer Facts/Opinions reading mode.",
+      "2026-02-18: Added methodology page with evidence and editorial rules."
+    ]
+  }
+}

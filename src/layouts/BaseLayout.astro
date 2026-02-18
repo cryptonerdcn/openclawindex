@@ -1,0 +1,64 @@
+---
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import type { SiteMessages } from '../lib/i18n';
+import type { Locale } from '../types/catalog';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+  currentPath: string;
+  messages: SiteMessages;
+}
+
+const { title, description, locale, currentPath, messages } = Astro.props;
+
+const navItems = [
+  { href: `/${locale}/variants`, label: messages.nav.variants },
+  { href: `/${locale}/services`, label: messages.nav.services },
+  { href: `/${locale}/methodology`, label: messages.nav.methodology },
+];
+
+function isCurrent(href: string) {
+  return currentPath === href || currentPath.startsWith(`${href}/`);
+}
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href={`/${locale}/variants`}>
+          OpenClawIndex
+        </a>
+        <nav class="nav-links" aria-label="primary">
+          {
+            navItems.map((item) => (
+              <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+        <LanguageSwitcher locale={locale} currentPath={currentPath} />
+      </div>
+    </header>
+    <main class="container fade-in">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">OpenClawIndex · Facts first, opinions transparent.</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1072 @@
+[
+  {
+    "id": "variant-nanobot",
+    "slug": "nanobot",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "github": "https://github.com/HKUDS/nanobot",
+      "x": "https://x.com/xubinrencs"
+    },
+    "metrics": {
+      "stars": 15000,
+      "footprint": "Python lightweight runtime"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "Nanobot",
+        "summary": "最知名的 Python 轻量 OpenClaw 替代，生态相对完整。",
+        "whatItIs": "由 HKU 团队推动的 OpenClaw 轻量化改写，定位为个人定制 agent 的工程化底座。",
+        "whatItClaims": "强调轻量、可扩展、多渠道能力和较成熟社区生态。",
+        "whereItShines": "适合想快速上手并持续定制私有 agent 的开发者。",
+        "limitations": "Python 运行时与依赖体积仍会高于极限二进制路线。",
+        "editorialTake": "作为基线项目很稳，先跑通业务再谈极限性能时优先考虑。",
+        "tags": [
+          "python",
+          "lightweight",
+          "ecosystem"
+        ]
+      },
+      "en": {
+        "name": "Nanobot",
+        "summary": "The best-known lightweight Python alternative in the OpenClaw family.",
+        "whatItIs": "A practical OpenClaw rewrite oriented to personal, customizable agent development.",
+        "whatItClaims": "Lightweight setup, broad integrations, and a mature ecosystem.",
+        "whereItShines": "A strong default for builders who value extensibility over extreme optimization.",
+        "limitations": "Python runtime overhead is still heavier than highly optimized binary-first stacks.",
+        "editorialTake": "A reliable baseline choice before chasing extreme speed claims.",
+        "tags": [
+          "python",
+          "lightweight",
+          "ecosystem"
+        ]
+      },
+      "ja": {
+        "name": "Nanobot",
+        "summary": "OpenClaw 系で最も有名な Python 軽量代替です。",
+        "whatItIs": "個人向けにカスタムしやすい OpenClaw 再実装プロジェクトです。",
+        "whatItClaims": "軽量性、拡張性、そして比較的成熟した周辺エコシステムを強調します。",
+        "whereItShines": "まず動く基盤を作り、後で機能拡張したいケースに向いています。",
+        "limitations": "極小バイナリ志向の実装よりはランタイムコストが残ります。",
+        "editorialTake": "総合バランスがよく、最初の選択肢として堅いです。",
+        "tags": [
+          "python",
+          "lightweight",
+          "ecosystem"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "high"
+    },
+    "evidence": [
+      "https://github.com/HKUDS/nanobot",
+      "https://x.com/xubinrencs"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "variant-picoclaw",
+    "slug": "picoclaw",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "github": "https://github.com/sipeed/picoclaw",
+      "website": "https://picoclaw.io",
+      "x": "https://x.com/SipeedIO"
+    },
+    "metrics": {
+      "stars": 5000,
+      "claimedSpeedup": "claims 30x vs Nanobot and 500x vs OpenClaw",
+      "footprint": "claims 10x smaller vs Nanobot"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "PicoClaw",
+        "summary": "Sipeed 推出的 Go 路线轻量改写，主打高性能和小体积。",
+        "whatItIs": "对标 Nanobot 的 Go 实现，强调部署轻、启动快、硬件适配广。",
+        "whatItClaims": "宣称比 Nanobot 快 30 倍小 10 倍，比 OpenClaw 快 500 倍小 100 倍。",
+        "whereItShines": "适合资源敏感场景和偏向二进制交付的工程团队。",
+        "limitations": "性能宣称依赖具体测试环境，需要独立复现验证。",
+        "editorialTake": "如果你追求极致体积和速度，这是最值得实测的一档。",
+        "tags": [
+          "go",
+          "performance",
+          "embedded"
+        ]
+      },
+      "en": {
+        "name": "PicoClaw",
+        "summary": "A Go rewrite focused on aggressive speed and size reduction.",
+        "whatItIs": "A Nanobot-style implementation in Go designed for lean deployment.",
+        "whatItClaims": "Markets strong speed and binary-size gains against Nanobot and OpenClaw.",
+        "whereItShines": "Great for constrained runtime environments and binary distribution workflows.",
+        "limitations": "Benchmark claims require independent reproduction before decisions.",
+        "editorialTake": "One of the most interesting candidates for real-world perf testing.",
+        "tags": [
+          "go",
+          "performance",
+          "embedded"
+        ]
+      },
+      "ja": {
+        "name": "PicoClaw",
+        "summary": "Go 製で高速化と小型化を前面に出した実装です。",
+        "whatItIs": "Nanobot 系の思想を Go で再構築した軽量プロジェクトです。",
+        "whatItClaims": "速度とサイズの大幅な改善を公称しています。",
+        "whereItShines": "低リソース環境や単一バイナリ配布に向いています。",
+        "limitations": "性能値は利用条件で変わるため実測が必須です。",
+        "editorialTake": "性能重視なら優先的にベンチ対象に入れる価値があります。",
+        "tags": [
+          "go",
+          "performance",
+          "embedded"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/sipeed/picoclaw",
+      "https://x.com/SipeedIO"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "variant-zeroclaw",
+    "slug": "zeroclaw",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "github": "https://github.com/zeroclaw-labs/zeroclaw",
+      "x": "https://x.com/argenistherose"
+    },
+    "metrics": {
+      "stars": 9500,
+      "claimedSpeedup": "positions itself as smaller and faster than PicoClaw",
+      "footprint": "Rust native binary"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "ZeroClaw",
+        "summary": "Rust 对标路线，继续向更小更快推进。",
+        "whatItIs": "由 Argenis 团队推进的 Rust 重写，定位性能和稳定性优先。",
+        "whatItClaims": "对外强调比 PicoClaw 进一步缩小体积并提升性能。",
+        "whereItShines": "适合希望把运行时开销压到更低的系统型工程团队。",
+        "limitations": "功能可用性和生态广度需要按具体版本核对。",
+        "editorialTake": "性能党值得重点关注，但要先做兼容性清单。",
+        "tags": [
+          "rust",
+          "performance",
+          "binary"
+        ]
+      },
+      "en": {
+        "name": "ZeroClaw",
+        "summary": "A Rust rewrite pushing for even smaller and faster execution.",
+        "whatItIs": "A performance-first OpenClaw-style implementation in Rust.",
+        "whatItClaims": "Promotes better speed and size characteristics than PicoClaw.",
+        "whereItShines": "Useful where low runtime overhead and binary predictability matter.",
+        "limitations": "Feature parity and integration breadth should be verified per release.",
+        "editorialTake": "Promising for performance, but validate compatibility early.",
+        "tags": [
+          "rust",
+          "performance",
+          "binary"
+        ]
+      },
+      "ja": {
+        "name": "ZeroClaw",
+        "summary": "Rust でさらに軽量化と高速化を狙う実装です。",
+        "whatItIs": "性能優先で設計された OpenClaw 系の再実装です。",
+        "whatItClaims": "PicoClaw より小さく速いことを主張しています。",
+        "whereItShines": "ランタイムコストを抑えたい本番用途に適しています。",
+        "limitations": "機能網羅性はバージョンごとの確認が必要です。",
+        "editorialTake": "性能面の期待値は高いが、導入前の検証は必須です。",
+        "tags": [
+          "rust",
+          "performance",
+          "binary"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/zeroclaw-labs/zeroclaw",
+      "https://x.com/argenistherose"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "variant-nanoclaw",
+    "slug": "nanoclaw",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "github": "https://github.com/qwibitai/nanoclaw",
+      "x": "https://x.com/Gavriel_Cohen"
+    },
+    "metrics": {
+      "stars": 7000,
+      "footprint": "small TypeScript codebase"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "nanoclaw",
+        "summary": "基于 TS 和 Claude Agents SDK 的小型 OpenClaw 改写。",
+        "whatItIs": "强调代码量可快速审阅、结构简单、便于安全审计的实现。",
+        "whatItClaims": "主打代码库足够小，十分钟可读完，且默认更安全。",
+        "whereItShines": "适合重视可读性和审计速度的小团队。",
+        "limitations": "渠道支持较窄，当前重点在 WhatsApp。",
+        "editorialTake": "走极简可审计路线，适合做小而稳的专项机器人。",
+        "tags": [
+          "typescript",
+          "claude-sdk",
+          "whatsapp"
+        ]
+      },
+      "en": {
+        "name": "nanoclaw",
+        "summary": "A compact TypeScript rewrite built on Claude Agents SDK.",
+        "whatItIs": "A small-codebase OpenClaw adaptation optimized for readability and auditability.",
+        "whatItClaims": "Small enough to review quickly and designed with safety in mind.",
+        "whereItShines": "Good for teams that prioritize code transparency and quick audits.",
+        "limitations": "Channel support is narrow, with WhatsApp as the primary target.",
+        "editorialTake": "A strong minimalist option when you need clarity over breadth.",
+        "tags": [
+          "typescript",
+          "claude-sdk",
+          "whatsapp"
+        ]
+      },
+      "ja": {
+        "name": "nanoclaw",
+        "summary": "TypeScript と Claude Agents SDK ベースの小型実装です。",
+        "whatItIs": "可読性と監査しやすさを重視した OpenClaw 改写版です。",
+        "whatItClaims": "短時間で全体把握できる小規模コードベースを主張します。",
+        "whereItShines": "コード監査を重視する小規模チームに向いています。",
+        "limitations": "対応チャネルが限定的で、主に WhatsApp 対応です。",
+        "editorialTake": "最小構成で安全性を確保したい場面に合います。",
+        "tags": [
+          "typescript",
+          "claude-sdk",
+          "whatsapp"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/qwibitai/nanoclaw",
+      "https://x.com/Gavriel_Cohen"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "variant-ironclaw",
+    "slug": "ironclaw",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "github": "https://github.com/nearai/ironclaw",
+      "x": "https://x.com/near_ai"
+    },
+    "metrics": {
+      "footprint": "WASM sandbox with PostgreSQL memory",
+      "stars": 2217
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "IronClaw",
+        "summary": "NEAR AI 生态项目，重点强调沙箱与安全能力。",
+        "whatItIs": "面向链上生态延展的 OpenClaw 变体，突出工具隔离和权限边界。",
+        "whatItClaims": "强调安全优先，包括 WASM 沙箱和能力控制设计。",
+        "whereItShines": "适合需要强隔离和策略控制的企业或链上场景。",
+        "limitations": "对区块链生态依赖较重，采用门槛和复杂度更高。",
+        "editorialTake": "如果你只关心通用效率，这条路线可能偏重；若重治理则值得看。",
+        "tags": [
+          "near",
+          "security",
+          "wasm"
+        ]
+      },
+      "en": {
+        "name": "IronClaw",
+        "summary": "A NEAR AI ecosystem fork emphasizing security and sandboxing.",
+        "whatItIs": "An OpenClaw variant designed around capability controls and safer tool execution.",
+        "whatItClaims": "Security-first architecture with sandboxing and permission boundaries.",
+        "whereItShines": "Useful where strict isolation and governance are first-class requirements.",
+        "limitations": "Blockchain-centric assumptions may add adoption and operational complexity.",
+        "editorialTake": "Good fit for governance-heavy stacks; less ideal for lightweight general use.",
+        "tags": [
+          "near",
+          "security",
+          "wasm"
+        ]
+      },
+      "ja": {
+        "name": "IronClaw",
+        "summary": "NEAR AI 系のプロジェクトで、安全性を前面に出しています。",
+        "whatItIs": "権限分離とツール実行の安全性を重視した OpenClaw 変種です。",
+        "whatItClaims": "WASM サンドボックスなど安全志向の設計を主張します。",
+        "whereItShines": "強い統制や分離が必要な組織利用に向いています。",
+        "limitations": "ブロックチェーン前提が運用複雑度を上げる可能性があります。",
+        "editorialTake": "統制重視なら候補、軽量汎用用途なら過剰になり得ます。",
+        "tags": [
+          "near",
+          "security",
+          "wasm"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "neutral",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/nearai/ironclaw",
+      "https://x.com/near_ai"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "variant-tinyclaw",
+    "slug": "tinyclaw",
+    "kind": "variant",
+    "category": "SatireFake",
+    "links": {
+      "github": "https://github.com/jlia0/tinyclaw",
+      "x": "https://x.com/jianxliao"
+    },
+    "metrics": {
+      "footprint": "shell script and external tools",
+      "stars": 2074
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "Tinyclaw",
+        "summary": "以 shell 脚本拼接 Claude Code 与聊天软件的轻量方案。",
+        "whatItIs": "早期以脚本封装工作流，后续加入多 agent 调度能力。",
+        "whatItClaims": "主打极简实现和快速部署。",
+        "whereItShines": "用于演示流程和快速试验时有一定上手价值。",
+        "limitations": "可定制性和智能能力边界明显，安全模型也依赖外部工具。",
+        "editorialTake": "更像脚本化包装，不建议作为长期生产方案。",
+        "tags": [
+          "shell",
+          "prototype",
+          "satire"
+        ]
+      },
+      "en": {
+        "name": "Tinyclaw",
+        "summary": "A shell-driven wrapper around Claude Code and chat tools.",
+        "whatItIs": "A script-heavy workflow implementation with later multi-agent extensions.",
+        "whatItClaims": "Ultra-simple setup and fast experimentation.",
+        "whereItShines": "Useful for demos and short-lived experiments.",
+        "limitations": "Limited customization and weaker built-in intelligence/safety posture.",
+        "editorialTake": "Best treated as a prototype scaffold, not a long-term production base.",
+        "tags": [
+          "shell",
+          "prototype",
+          "satire"
+        ]
+      },
+      "ja": {
+        "name": "Tinyclaw",
+        "summary": "Claude Code とチャット連携を shell で束ねた方式です。",
+        "whatItIs": "スクリプト主体のワークフロー実装で、後にマルチエージェント化しました。",
+        "whatItClaims": "導入の簡単さと試行速度を訴求しています。",
+        "whereItShines": "デモ用途や短期検証では使いやすいです。",
+        "limitations": "カスタマイズ性と安全設計の余地が小さめです。",
+        "editorialTake": "本番基盤よりも試作向けの位置付けが妥当です。",
+        "tags": [
+          "shell",
+          "prototype",
+          "satire"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "not_recommended",
+      "confidence": "high"
+    },
+    "evidence": [
+      "https://github.com/jlia0/tinyclaw",
+      "https://x.com/jianxliao"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "variant-safeclaw",
+    "slug": "safeclaw",
+    "kind": "variant",
+    "category": "SatireFake",
+    "links": {
+      "github": "https://github.com/princezuda/safeclaw",
+      "x": "https://x.com/zudasworld"
+    },
+    "metrics": {
+      "stars": 54,
+      "footprint": "no LLM, deterministic pipeline"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "safeclaw",
+        "summary": "对 OpenClaw 的技术讽刺改写，不使用大模型。",
+        "whatItIs": "用传统算法栈复现大量 AI agent 功能的实验性项目。",
+        "whatItClaims": "强调可预测、低成本、免提示注入。",
+        "whereItShines": "技术演示和工程娱乐性都很强，适合体验边界。",
+        "limitations": "能力上限受限于规则和模型外推能力缺失。",
+        "editorialTake": "虽然是讽刺路线，但技术完成度和趣味性都值得一试。",
+        "tags": [
+          "deterministic",
+          "satire",
+          "no-llm"
+        ]
+      },
+      "en": {
+        "name": "safeclaw",
+        "summary": "A satirical OpenClaw alternative that intentionally avoids LLM usage.",
+        "whatItIs": "A deterministic pipeline reproducing many agent behaviors without foundation models.",
+        "whatItClaims": "Predictability, lower cost, and resistance to prompt injection.",
+        "whereItShines": "High technical entertainment value and good for boundary testing.",
+        "limitations": "Capability ceiling is lower without model-driven reasoning.",
+        "editorialTake": "Satirical but technically interesting; worth trying for perspective.",
+        "tags": [
+          "deterministic",
+          "satire",
+          "no-llm"
+        ]
+      },
+      "ja": {
+        "name": "safeclaw",
+        "summary": "LLM を使わない風刺的な OpenClaw 代替実装です。",
+        "whatItIs": "従来アルゴリズムでエージェント機能を再現する実験プロジェクトです。",
+        "whatItClaims": "予測可能性、低コスト、プロンプト注入耐性を主張します。",
+        "whereItShines": "技術的な遊びとして完成度が高く、学習価値もあります。",
+        "limitations": "推論能力の上限は LLM 利用型より低くなります。",
+        "editorialTake": "風刺枠でも技術的に面白く、試す価値があります。",
+        "tags": [
+          "deterministic",
+          "satire",
+          "no-llm"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/princezuda/safeclaw",
+      "https://x.com/zudasworld"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "service-secure-openclaw",
+    "slug": "secure-openclaw",
+    "kind": "service",
+    "category": "Security",
+    "links": {
+      "github": "https://github.com/ComposioHQ/secure-openclaw"
+    },
+    "metrics": {
+      "stars": 1500
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "Secure-OpenClaw",
+        "summary": "偏企业连接器和 OAuth 的安全增强方案。",
+        "whatItIs": "围绕 OpenClaw 的连接管理与权限控制强化层。",
+        "whatItClaims": "提供大量应用连接能力和企业级授权模型。",
+        "whereItShines": "多系统集成且需要强访问控制的场景。",
+        "limitations": "接入复杂度和配置成本高于纯本地玩法。",
+        "editorialTake": "企业集成路线可行，但要控制接入范围。",
+        "tags": [
+          "security",
+          "oauth",
+          "integration"
+        ]
+      },
+      "en": {
+        "name": "Secure-OpenClaw",
+        "summary": "A security-oriented integration layer with enterprise OAuth focus.",
+        "whatItIs": "An OpenClaw security extension for app connectivity and permission control.",
+        "whatItClaims": "Large integration surface with enterprise-grade auth workflows.",
+        "whereItShines": "Strong fit for regulated, multi-system enterprise workflows.",
+        "limitations": "Integration and configuration overhead can be high.",
+        "editorialTake": "Useful for enterprise control planes, overkill for hobby stacks.",
+        "tags": [
+          "security",
+          "oauth",
+          "integration"
+        ]
+      },
+      "ja": {
+        "name": "Secure-OpenClaw",
+        "summary": "OAuth と接続管理に強いセキュリティ拡張です。",
+        "whatItIs": "OpenClaw の権限制御と連携面を強化するプロジェクトです。",
+        "whatItClaims": "多数の外部サービス接続と企業向け認可を提供します。",
+        "whereItShines": "監査要件のある業務連携に向いています。",
+        "limitations": "導入と運用の設定コストは高めです。",
+        "editorialTake": "企業統制が必要な場合には有力ですが、個人用途には重いです。",
+        "tags": [
+          "security",
+          "oauth",
+          "integration"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/ComposioHQ/secure-openclaw"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "service-clawrouter",
+    "slug": "clawrouter",
+    "kind": "service",
+    "category": "Infrastructure",
+    "links": {
+      "github": "https://github.com/BlockRunAI/ClawRouter"
+    },
+    "metrics": {
+      "stars": 2700
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "ClawRouter",
+        "summary": "面向 agent 工作流的模型路由与调度基础设施。",
+        "whatItIs": "为 OpenClaw 提供模型路由、成本与策略分配的基础组件。",
+        "whatItClaims": "强调智能分流、路由优化和任务级模型匹配。",
+        "whereItShines": "多模型并行、成本优化和稳定性治理场景。",
+        "limitations": "路由策略调优需要持续观测与数据积累。",
+        "editorialTake": "走向规模化时几乎是必需层。",
+        "tags": [
+          "infrastructure",
+          "routing",
+          "llm"
+        ]
+      },
+      "en": {
+        "name": "ClawRouter",
+        "summary": "An agent-native model routing layer for OpenClaw workloads.",
+        "whatItIs": "Infrastructure for model selection, policy routing, and cost-aware execution.",
+        "whatItClaims": "Smarter model dispatch and workflow-level optimization.",
+        "whereItShines": "Valuable in multi-model production pipelines.",
+        "limitations": "Requires ongoing tuning and observability maturity.",
+        "editorialTake": "A strong building block once scale and cost control matter.",
+        "tags": [
+          "infrastructure",
+          "routing",
+          "llm"
+        ]
+      },
+      "ja": {
+        "name": "ClawRouter",
+        "summary": "OpenClaw 向けのモデルルーティング基盤です。",
+        "whatItIs": "モデル選択やコスト制御を担うインフラコンポーネントです。",
+        "whatItClaims": "タスクに応じたルーティング最適化を提供します。",
+        "whereItShines": "複数モデル運用やコスト最適化で効果があります。",
+        "limitations": "観測基盤と継続チューニングが前提になります。",
+        "editorialTake": "本格運用フェーズで価値が出るタイプです。",
+        "tags": [
+          "infrastructure",
+          "routing",
+          "llm"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "high"
+    },
+    "evidence": [
+      "https://github.com/BlockRunAI/ClawRouter"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "service-archestra",
+    "slug": "archestra",
+    "kind": "service",
+    "category": "Infrastructure",
+    "links": {
+      "github": "https://github.com/archestra-ai/archestra",
+      "x": "https://x.com/archestra_ai"
+    },
+    "metrics": {
+      "stars": 3500
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "Archestra",
+        "summary": "面向企业的 OpenClaw 基础设施编排平台。",
+        "whatItIs": "提供 MCP registry、网关和编排层的企业方案。",
+        "whatItClaims": "按团队维度做成本控制和注入防护，并可接入 K8s。",
+        "whereItShines": "需要组织级治理和跨团队统一平台的企业。",
+        "limitations": "平台化能力强但引入成本和治理复杂度也更高。",
+        "editorialTake": "企业化能力完整，但不适合轻量个人场景。",
+        "tags": [
+          "enterprise",
+          "mcp",
+          "kubernetes"
+        ]
+      },
+      "en": {
+        "name": "Archestra",
+        "summary": "An enterprise orchestration stack for OpenClaw ecosystems.",
+        "whatItIs": "Cloud-native tooling around MCP registry, gateway, and orchestration controls.",
+        "whatItClaims": "Team-level cost controls and prompt-injection defenses with K8s alignment.",
+        "whereItShines": "Designed for organizations that need centralized governance.",
+        "limitations": "Adoption cost is non-trivial for small teams.",
+        "editorialTake": "Feature-rich for enterprise, excessive for solo builders.",
+        "tags": [
+          "enterprise",
+          "mcp",
+          "kubernetes"
+        ]
+      },
+      "ja": {
+        "name": "Archestra",
+        "summary": "企業向け OpenClaw オーケストレーション基盤です。",
+        "whatItIs": "MCP レジストリとゲートウェイを含む統合インフラです。",
+        "whatItClaims": "チーム単位のコスト管理と防御機能を提供します。",
+        "whereItShines": "組織横断の統制が必要な環境で有効です。",
+        "limitations": "小規模チームには導入負荷が高いです。",
+        "editorialTake": "企業には強力だが、個人用途には重すぎる場合があります。",
+        "tags": [
+          "enterprise",
+          "mcp",
+          "kubernetes"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "neutral",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/archestra-ai/archestra",
+      "https://x.com/archestra_ai"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "service-simpleclaw",
+    "slug": "simpleclaw",
+    "kind": "service",
+    "category": "Hosting",
+    "links": {
+      "website": "https://simpleclaw.com",
+      "x": "https://x.com/saviomartin7"
+    },
+    "metrics": {
+      "footprint": "managed hosting"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "SimpleCLAW",
+        "summary": "主打一键托管部署的 OpenClaw 服务化产品。",
+        "whatItIs": "提供快速上线和模型接入的托管服务。",
+        "whatItClaims": "强调低门槛和分钟级部署。",
+        "whereItShines": "希望尽快上线验证业务而非自建基础设施的团队。",
+        "limitations": "托管模式意味着更强的平台依赖。",
+        "editorialTake": "适合快速验证，长期需评估成本和迁移策略。",
+        "tags": [
+          "hosting",
+          "managed",
+          "deployment"
+        ]
+      },
+      "en": {
+        "name": "SimpleCLAW",
+        "summary": "A managed hosting option focused on one-click deployment.",
+        "whatItIs": "A service layer that speeds up OpenClaw setup and model wiring.",
+        "whatItClaims": "Fast onboarding and minute-level deployment workflow.",
+        "whereItShines": "Great for teams optimizing for speed to first production.",
+        "limitations": "Managed convenience introduces provider dependency.",
+        "editorialTake": "Strong for fast launches; plan portability early.",
+        "tags": [
+          "hosting",
+          "managed",
+          "deployment"
+        ]
+      },
+      "ja": {
+        "name": "SimpleCLAW",
+        "summary": "ワンクリック導入を重視したホスティングサービスです。",
+        "whatItIs": "OpenClaw の構築と運用開始を短時間化する管理型サービスです。",
+        "whatItClaims": "短時間デプロイと低い導入ハードルを訴求します。",
+        "whereItShines": "インフラ構築よりも早期検証を優先するチーム向けです。",
+        "limitations": "管理型のためプラットフォーム依存が発生します。",
+        "editorialTake": "立ち上げは速いが、将来の移行戦略は先に考えるべきです。",
+        "tags": [
+          "hosting",
+          "managed",
+          "deployment"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://simpleclaw.com",
+      "https://x.com/saviomartin7"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "service-visionclaw",
+    "slug": "visionclaw",
+    "kind": "service",
+    "category": "DesktopHardware",
+    "links": {
+      "github": "https://github.com/sseanliu/VisionClaw"
+    },
+    "metrics": {
+      "stars": 993
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "VisionClaw",
+        "summary": "面向智能眼镜的实时 AI 助手接入项目。",
+        "whatItIs": "将 OpenClaw 生态能力接入可穿戴硬件交互场景。",
+        "whatItClaims": "通过视觉与语音链路实现近实时助手体验。",
+        "whereItShines": "硬件交互实验和多模态助手原型。",
+        "limitations": "依赖特定设备链路，泛化部署难度较高。",
+        "editorialTake": "硬件方向很有想象力，但工程约束明显。",
+        "tags": [
+          "hardware",
+          "wearable",
+          "multimodal"
+        ]
+      },
+      "en": {
+        "name": "VisionClaw",
+        "summary": "A real-time assistant integration for smart-glasses scenarios.",
+        "whatItIs": "An OpenClaw-adjacent hardware project for wearable interaction.",
+        "whatItClaims": "Near real-time assistant behavior through visual and voice channels.",
+        "whereItShines": "Useful for multimodal and edge-device prototyping.",
+        "limitations": "Device dependency limits broad deployment portability.",
+        "editorialTake": "Ambitious hardware direction with clear integration constraints.",
+        "tags": [
+          "hardware",
+          "wearable",
+          "multimodal"
+        ]
+      },
+      "ja": {
+        "name": "VisionClaw",
+        "summary": "スマートグラス向けのリアルタイム支援プロジェクトです。",
+        "whatItIs": "OpenClaw 系機能をウェアラブル体験に拡張する実装です。",
+        "whatItClaims": "視覚と音声を組み合わせた即時性の高い支援を提供します。",
+        "whereItShines": "マルチモーダル実験やハード連携検証に向いています。",
+        "limitations": "デバイス依存が強く汎用展開は難しめです。",
+        "editorialTake": "方向性は魅力的だが、実運用には前提条件が多いです。",
+        "tags": [
+          "hardware",
+          "wearable",
+          "multimodal"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "neutral",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/sseanliu/VisionClaw"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "service-clawvault",
+    "slug": "clawvault",
+    "kind": "service",
+    "category": "Ecosystem",
+    "links": {
+      "github": "https://github.com/Versatly/clawvault",
+      "x": "https://x.com/benrzy"
+    },
+    "metrics": {
+      "stars": 249
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "ClawVault",
+        "summary": "面向 agent 的结构化记忆与长期存储组件。",
+        "whatItIs": "为 OpenClaw 相关系统提供可检索、可恢复的记忆层。",
+        "whatItClaims": "强调长期记忆和安全备份能力。",
+        "whereItShines": "需要历史上下文和可追溯性的自动化流程。",
+        "limitations": "记忆质量高度依赖索引策略和检索设计。",
+        "editorialTake": "记忆系统是长期可用性的关键基础设施之一。",
+        "tags": [
+          "memory",
+          "backup",
+          "ecosystem"
+        ]
+      },
+      "en": {
+        "name": "ClawVault",
+        "summary": "A structured memory and backup component for agent systems.",
+        "whatItIs": "A storage layer that makes agent memory more searchable and recoverable.",
+        "whatItClaims": "Persistent memory and safer backup workflows.",
+        "whereItShines": "Great for long-running agents that depend on historical context.",
+        "limitations": "Memory quality depends heavily on indexing and retrieval strategy.",
+        "editorialTake": "Memory architecture is foundational for durable agent behavior.",
+        "tags": [
+          "memory",
+          "backup",
+          "ecosystem"
+        ]
+      },
+      "ja": {
+        "name": "ClawVault",
+        "summary": "エージェント向けの構造化メモリ基盤です。",
+        "whatItIs": "検索可能で復元しやすい長期記憶層を提供します。",
+        "whatItClaims": "継続的な記憶保持と安全なバックアップを訴求します。",
+        "whereItShines": "履歴コンテキストが重要な長期運用で有効です。",
+        "limitations": "索引設計が不十分だとメモリ品質が低下します。",
+        "editorialTake": "長期運用を目指すなら優先度の高い基盤です。",
+        "tags": [
+          "memory",
+          "backup",
+          "ecosystem"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/Versatly/clawvault",
+      "https://x.com/benrzy"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "variant-mimiclaw",
+    "slug": "mimiclaw",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "website": "https://www.mimiclaw.io/",
+      "github": "https://github.com/memovai/mimiclaw",
+      "x": "https://x.com/ssslvky"
+    },
+    "metrics": {
+      "stars": 2366,
+      "claimedSpeedup": "positions itself as smaller, local-first, and smarter than PicoClaw",
+      "footprint": "pure C implementation with $5 chip (ESP32-S3 class) claim; Telegram-only"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "MimiClaw",
+        "summary": "基于 C 的 OpenClaw 对标实现，强调超低成本硬件可运行。",
+        "whatItIs": "由 @ssslvky 推进的 C 语言重写项目，主打本地优先与可移植部署。",
+        "whatItClaims": "宣称可在约 $5 芯片上运行，并把部署门槛压到更低。",
+        "whereItShines": "资源受限设备、极低成本部署和本地优先实验场景。",
+        "limitations": "当前公开定位以 Telegram 通道为主，通道生态较窄。",
+        "editorialTake": "如果你追求极限成本和硬件落地，这条 C 路线值得重点实测。",
+        "tags": [
+          "c",
+          "embedded",
+          "telegram"
+        ]
+      },
+      "en": {
+        "name": "MimiClaw",
+        "summary": "A C-based OpenClaw-style rewrite targeting very low-cost hardware.",
+        "whatItIs": "A local-first C implementation led by @ssslvky, focused on portable deployment.",
+        "whatItClaims": "Markets a '$5 chip' runtime claim and lower deployment overhead.",
+        "whereItShines": "Constrained devices, low-cost prototyping, and local-first experimentation.",
+        "limitations": "Current positioning is heavily Telegram-centric, with narrower channel coverage.",
+        "editorialTake": "A serious candidate when your priority is cost floor plus hardware portability.",
+        "tags": [
+          "c",
+          "embedded",
+          "telegram"
+        ]
+      },
+      "ja": {
+        "name": "MimiClaw",
+        "summary": "C 言語で再実装された OpenClaw 系プロジェクトです。",
+        "whatItIs": "@ssslvky によるローカル優先・可搬性重視の C 実装です。",
+        "whatItClaims": "約 5 ドル級チップでの動作を訴求し、導入コスト低減を主張します。",
+        "whereItShines": "低リソース環境、低コスト検証、組み込み寄りの実験で有効です。",
+        "limitations": "現状は Telegram 中心の導線で、チャネル展開は限定的です。",
+        "editorialTake": "コスト最適化とハード展開を重視するなら優先度が高い候補です。",
+        "tags": [
+          "c",
+          "embedded",
+          "telegram"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://www.mimiclaw.io/",
+      "https://github.com/memovai/mimiclaw",
+      "https://x.com/ssslvky"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "service-moltbook",
+    "slug": "moltbook",
+    "kind": "service",
+    "category": "Ecosystem",
+    "links": {
+      "website": "https://moltbook.com/",
+      "github": "https://github.com/moltbook/moltbook-web-client-application",
+      "x": "https://x.com/mattprd"
+    },
+    "metrics": {
+      "stars": 105,
+      "footprint": "cloud social/distribution platform for AI agents"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "Moltbook",
+        "summary": "面向 AI Agent 的社交与分发平台。",
+        "whatItIs": "Moltbook 提供 feed、账号与互动机制，定位为 agent 的社区分发层。",
+        "whatItClaims": "官方定位为“AI Agent 的社交网络”，强调快速发布与传播。",
+        "whereItShines": "适合做 agent 内容分发、公开评测和生态曝光。",
+        "limitations": "它是平台服务而非 OpenClaw 内核改写，能力边界受平台规则约束。",
+        "editorialTake": "更像生态入口和增长通道，适合作为上层运营阵地。",
+        "tags": [
+          "social",
+          "distribution",
+          "ecosystem"
+        ]
+      },
+      "en": {
+        "name": "Moltbook",
+        "summary": "A social and distribution platform built for AI agents.",
+        "whatItIs": "Moltbook provides feed, profile, and engagement layers for agent-native publishing.",
+        "whatItClaims": "Brands itself as 'The Social Network for AI Agents' with fast publishing loops.",
+        "whereItShines": "Useful for discovery, public benchmarking, and ecosystem visibility.",
+        "limitations": "It is a platform layer, not an OpenClaw core rewrite, and is policy-constrained.",
+        "editorialTake": "Best seen as an ecosystem growth channel rather than a runtime replacement.",
+        "tags": [
+          "social",
+          "distribution",
+          "ecosystem"
+        ]
+      },
+      "ja": {
+        "name": "Moltbook",
+        "summary": "AI エージェント向けのソーシャル配信プラットフォームです。",
+        "whatItIs": "フィード、プロフィール、交流機能を提供するエージェント向け配信基盤です。",
+        "whatItClaims": "『AI Agent のソーシャルネットワーク』として高速な公開と拡散を訴求します。",
+        "whereItShines": "発見性向上、公開比較、エコシステム露出の用途に向いています。",
+        "limitations": "OpenClaw 本体の再実装ではなく、機能はプラットフォーム方針に依存します。",
+        "editorialTake": "実行基盤というより、流通とコミュニティ接続の入口として有効です。",
+        "tags": [
+          "social",
+          "distribution",
+          "ecosystem"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "neutral",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://moltbook.com/",
+      "https://github.com/moltbook/moltbook-web-client-application",
+      "https://x.com/mattprd"
+    ],
+    "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "service-kimiclaw",
+    "slug": "kimiclaw",
+    "kind": "service",
+    "category": "Hosting",
+    "links": {
+      "website": "https://www.kimi.com/bot",
+      "github": "https://github.com/MoonshotAI/Kimi-K2",
+      "x": "https://x.com/Kimi_Moonshot"
+    },
+    "metrics": {
+      "stars": 10382,
+      "footprint": "cloud-hosted assistant workflow; no built-in proxy routing"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "KimiClaw",
+        "summary": "基于 Kimi 生态的云端 Bot 使用形态。",
+        "whatItIs": "社区常用“KimiClaw”指代围绕 Kimi 云端能力搭建的 bot 工作流。",
+        "whatItClaims": "依托 Kimi 的云端模型与多渠道能力，降低本地部署负担。",
+        "whereItShines": "适合想快速接入云端推理能力并减少自运维成本的团队。",
+        "limitations": "默认不提供自动翻墙/代理链路，外网可达性依赖你所在网络环境。",
+        "editorialTake": "上手门槛低，但跨区域网络能力要提前做可达性验证。",
+        "tags": [
+          "cloud",
+          "hosting",
+          "kimi"
+        ]
+      },
+      "en": {
+        "name": "KimiClaw",
+        "summary": "A cloud-hosted bot pattern built on top of the Kimi ecosystem.",
+        "whatItIs": "In community usage, 'KimiClaw' usually refers to bot workflows backed by Kimi cloud models.",
+        "whatItClaims": "Leverages Kimi-hosted inference and channels to reduce local ops burden.",
+        "whereItShines": "Useful when teams want managed cloud inference with minimal self-hosting.",
+        "limitations": "No built-in proxy routing is exposed by default; reachability depends on local network egress.",
+        "editorialTake": "Convenient for speed-to-market, but validate cross-region network access early.",
+        "tags": [
+          "cloud",
+          "hosting",
+          "kimi"
+        ]
+      },
+      "ja": {
+        "name": "KimiClaw",
+        "summary": "Kimi エコシステム上のクラウド Bot 運用形態です。",
+        "whatItIs": "コミュニティ文脈では、Kimi のクラウド推論を使う Bot ワークフローを指します。",
+        "whatItClaims": "Kimi のクラウド能力を使い、ローカル運用負荷を下げることを狙います。",
+        "whereItShines": "自己ホスト運用を減らしつつ、早く立ち上げたいケースに向いています。",
+        "limitations": "標準で自動プロキシ経路は提供されず、外部到達性は利用ネットワークに依存します。",
+        "editorialTake": "導入は速い一方、リージョン越し通信は事前検証が必要です。",
+        "tags": [
+          "cloud",
+          "hosting",
+          "kimi"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "neutral",
+      "confidence": "low"
+    },
+    "evidence": [
+      "https://www.kimi.com/bot",
+      "https://github.com/MoonshotAI/Kimi-K2",
+      "https://x.com/Kimi_Moonshot"
+    ],
+    "updatedAt": "2026-02-18"
+  }
+]
