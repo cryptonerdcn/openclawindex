@@ -96,6 +96,10 @@
     ],
     "disclaimer": "This website is not investment, legal, or security advice. Validate claims in your own environment."
   },
+  "footer": {
+    "tagline": "Directory of OpenClaw variants and ecosystem",
+    "author": "Author"
+  },
   "changelog": {
     "title": "Changelog",
     "intro": "Tracking major updates to the directory and editorial framework.",

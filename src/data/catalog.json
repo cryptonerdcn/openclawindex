@@ -9,7 +9,7 @@
       "x": "https://x.com/xubinrencs"
     },
     "metrics": {
-      "stars": 15000,
+      "stars": 21118,
       "footprint": "Python lightweight runtime"
     },
     "locales": {
@@ -77,7 +77,7 @@
       "x": "https://x.com/SipeedIO"
     },
     "metrics": {
-      "stars": 5000,
+      "stars": 15106,
       "claimedSpeedup": "claims 30x vs Nanobot and 500x vs OpenClaw",
       "footprint": "claims 10x smaller vs Nanobot"
     },
@@ -145,7 +145,7 @@
       "x": "https://x.com/argenistherose"
     },
     "metrics": {
-      "stars": 9500,
+      "stars": 11248,
       "claimedSpeedup": "positions itself as smaller and faster than PicoClaw",
       "footprint": "Rust native binary"
     },
@@ -213,7 +213,7 @@
       "x": "https://x.com/Gavriel_Cohen"
     },
     "metrics": {
-      "stars": 7000,
+      "stars": 9203,
       "footprint": "small TypeScript codebase"
     },
     "locales": {

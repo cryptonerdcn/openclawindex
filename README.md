@@ -43,10 +43,20 @@ npx astro check
 
 ## Deployment
 
-This project is built as static output and can be deployed directly to Cloudflare Pages or Vercel using:
+### GitHub Auto Deploy to Cloudflare Pages
+
+Pushes to `main` trigger `.github/workflows/deploy-cloudflare-pages.yml`.
+
+Required GitHub repository secrets:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+Once secrets are configured, every commit to `main` is built and deployed to Cloudflare Pages project `openclawindex`.
+
+### Manual Deploy
 
 ```bash
 npm run build
+npx wrangler pages deploy dist --project-name openclawindex --branch main
 ```
-
-Artifacts are generated in `dist/`.

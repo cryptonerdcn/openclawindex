@@ -96,6 +96,10 @@
     ],
     "disclaimer": "本网站不构成投资建议或安全保证，所有结论请结合你自己的测试环境独立验证。"
   },
+  "footer": {
+    "tagline": "OpenClaw 变种和生态目录",
+    "author": "作者"
+  },
   "changelog": {
     "title": "更新记录",
     "intro": "展示当前收录规则和目录变更。",
