@@ -1078,13 +1078,13 @@
       "github": "https://github.com/mosaxiv/clawlet"
     },
     "metrics": {
-      "stars": 653,
+      "stars": 659,
       "footprint": "single binary, no CGO/runtime/dependencies"
     },
     "locales": {
       "zh-CN": {
         "name": "Clawlet",
-        "summary": "Go 实现的超轻量个人 AI 助手，对标 OpenClaw/Nanobot 路线。",
+        "summary": "使用 Go 写的 Nanobot 对标实现，路线接近 PicoClaw。",
         "whatItIs": "一个单二进制分发的个人 agent 项目，内置 SQLite + sqlite-vec 语义记忆检索。",
         "whatItClaims": "强调 Single Binary、No CGO、No Runtime、No Dependencies 的轻部署能力。",
         "whereItShines": "适合本地优先、快速落地和资源受限环境的个人助手场景。",
@@ -1098,7 +1098,7 @@
       },
       "en": {
         "name": "Clawlet",
-        "summary": "A Go-based ultra-light personal AI assistant inspired by OpenClaw/Nanobot.",
+        "summary": "A Go Nanobot-style rewrite with a direction similar to PicoClaw.",
         "whatItIs": "A single-binary personal agent with bundled SQLite + sqlite-vec semantic memory search.",
         "whatItClaims": "Markets a deployment model of Single Binary, No CGO, No Runtime, and No Dependencies.",
         "whereItShines": "Strong fit for local-first usage, fast setup, and constrained runtime environments.",
@@ -1112,7 +1112,7 @@
       },
       "ja": {
         "name": "Clawlet",
-        "summary": "OpenClaw/Nanobot 系に着想を得た、Go 製の超軽量パーソナル AI アシスタントです。",
+        "summary": "Go で書かれた Nanobot 対抗実装で、方向性は PicoClaw に近いです。",
         "whatItIs": "SQLite + sqlite-vec を同梱した単一バイナリ配布の個人向けエージェント実装です。",
         "whatItClaims": "Single Binary、No CGO、No Runtime、No Dependencies を前面に出しています。",
         "whereItShines": "ローカル優先運用、素早い導入、低リソース環境での利用に向いています。",
@@ -1134,5 +1134,75 @@
       "https://github.com/mosaxiv/clawlet#readme"
     ],
     "updatedAt": "2026-02-18"
+  },
+  {
+    "id": "variant-nullclaw",
+    "slug": "nullclaw",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "website": "https://nullclaw.github.io",
+      "github": "https://github.com/nullclaw/nullclaw",
+      "x": "https://x.com/jedisct1"
+    },
+    "metrics": {
+      "stars": 386,
+      "claimedSpeedup": "claims 678 KB binary, ~1 MB RAM, and sub-2 ms boot on modern hardware",
+      "footprint": "Zig static binary, positioned for ~$5 boards"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "NullClaw",
+        "summary": "Zig 写的超轻量路线，定位接近 MimiClaw，可跑在约 $5 的 Chip 上。",
+        "whatItIs": "一个 100% Zig 的 OpenClaw 对标实现，主打单二进制和极低资源占用。",
+        "whatItClaims": "官方强调 678KB 二进制、约 1MB 内存和毫秒级启动，并支持廉价硬件板卡。",
+        "whereItShines": "适合极低资源、边缘设备和成本敏感场景的个人/实验性 agent 部署。",
+        "limitations": "项目较新，性能数据以项目自测为主，生产可用性仍需你自己压测验证。",
+        "editorialTake": "如果你在意“极限小体积 + Zig 路线”，NullClaw 值得重点跟踪。",
+        "tags": [
+          "zig",
+          "embedded",
+          "single-binary"
+        ]
+      },
+      "en": {
+        "name": "NullClaw",
+        "summary": "A Zig ultra-light implementation positioned close to MimiClaw, with ~$5 board targeting.",
+        "whatItIs": "A 100% Zig OpenClaw-style rewrite focused on tiny binary size and low runtime overhead.",
+        "whatItClaims": "Highlights a 678KB binary, ~1MB RAM footprint, and millisecond-level startup metrics.",
+        "whereItShines": "Well-suited for edge hardware, constrained environments, and cost-sensitive deployments.",
+        "limitations": "Still early; benchmark claims are largely project-reported and need independent validation.",
+        "editorialTake": "A strong watchlist project if you care about extreme footprint with a Zig stack.",
+        "tags": [
+          "zig",
+          "embedded",
+          "single-binary"
+        ]
+      },
+      "ja": {
+        "name": "NullClaw",
+        "summary": "Zig 製の超軽量実装で、MimiClaw に近い立ち位置かつ約 5 ドル級チップを想定しています。",
+        "whatItIs": "100% Zig で構成された OpenClaw 系再実装で、単一バイナリ運用を重視します。",
+        "whatItClaims": "678KB バイナリ、約 1MB RAM、ミリ秒級起動を公式に訴求しています。",
+        "whereItShines": "低リソース環境、エッジ機器、コスト重視の導入で有効です。",
+        "limitations": "新規性が高く、性能指標は自己計測が中心のため実運用前の検証が必要です。",
+        "editorialTake": "極小フットプリントを狙う Zig 路線として注目度が高いです。",
+        "tags": [
+          "zig",
+          "embedded",
+          "single-binary"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/nullclaw/nullclaw",
+      "https://github.com/nullclaw/nullclaw#readme",
+      "https://x.com/jedisct1"
+    ],
+    "updatedAt": "2026-02-19"
   }
 ]
