@@ -1204,5 +1204,74 @@
       "https://x.com/jedisct1"
     ],
     "updatedAt": "2026-02-19"
+  },
+  {
+    "id": "variant-mistermorph",
+    "slug": "mistermorph",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "website": "https://mistermorph.com/",
+      "github": "https://github.com/quailyquaily/mistermorph",
+      "x": "https://x.com/lyricwai"
+    },
+    "metrics": {
+      "stars": 28,
+      "footprint": "Unified Agent CLI with reusable Go core"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "mistermorph",
+        "summary": "Go 写的统一 Agent CLI + 可复用核心，对标 OpenClaw 生态。",
+        "whatItIs": "一个可单独命令行运行，也可嵌入其他应用的 Go agent 核心项目。",
+        "whatItClaims": "强调可复用 Go core、较完善安全默认、Skills 系统和多渠道（Telegram/Slack）能力。",
+        "whereItShines": "适合要在自有产品里复用 agent 内核，或者想用 CLI 快速落地的团队。",
+        "limitations": "项目还在快速迭代阶段，功能广度较高但需要按实际场景做稳定性验证。",
+        "editorialTake": "更偏工程化中台路线，不只是一套脚本包装，值得持续观察。",
+        "tags": [
+          "go",
+          "agent-core",
+          "cli"
+        ]
+      },
+      "en": {
+        "name": "mistermorph",
+        "summary": "A Go-based unified Agent CLI plus reusable core in the OpenClaw-adjacent space.",
+        "whatItIs": "A reusable Go agent core that can run as a CLI or be embedded into other applications.",
+        "whatItClaims": "Promotes reusable architecture, strong security defaults, skills support, and multi-channel integrations.",
+        "whereItShines": "Useful for teams that want to ship quickly with CLI while retaining an embeddable core.",
+        "limitations": "Fast-moving project surface; broad feature set still requires scenario-specific hardening checks.",
+        "editorialTake": "Feels closer to an engineering core platform than a thin wrapper project.",
+        "tags": [
+          "go",
+          "agent-core",
+          "cli"
+        ]
+      },
+      "ja": {
+        "name": "mistermorph",
+        "summary": "Go 製の統合 Agent CLI と再利用可能コアを提供する OpenClaw 周辺プロジェクトです。",
+        "whatItIs": "CLI 単体実行と他アプリへの組み込みの両方を想定した Go エージェント基盤です。",
+        "whatItClaims": "再利用しやすいコア設計、強めの安全デフォルト、Skills、複数チャネル連携を訴求します。",
+        "whereItShines": "CLI ですぐ運用を始めつつ、後で自社アプリへ組み込みたいケースに向いています。",
+        "limitations": "更新が速く機能面は広いため、実運用前に環境別の検証が必要です。",
+        "editorialTake": "スクリプト集というより、再利用可能なエージェント基盤に寄った設計です。",
+        "tags": [
+          "go",
+          "agent-core",
+          "cli"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://mistermorph.com/",
+      "https://github.com/quailyquaily/mistermorph",
+      "https://x.com/lyricwai"
+    ],
+    "updatedAt": "2026-02-19"
   }
 ]
