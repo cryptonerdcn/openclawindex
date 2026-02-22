@@ -1273,5 +1273,143 @@
       "https://x.com/lyricwai"
     ],
     "updatedAt": "2026-02-19"
+  },
+  {
+    "id": "variant-zclaw",
+    "slug": "zclaw",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "website": "https://zclaw.dev",
+      "github": "https://github.com/tnm/zclaw",
+      "x": "https://x.com/tnm"
+    },
+    "metrics": {
+      "stars": 548,
+      "footprint": "<= 888 KiB all-in firmware target on ESP32"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "zclaw",
+        "summary": "C 语言实现的超小型 OpenClaw 路线，定位 ESP32 上的个人 AI 助手。",
+        "whatItIs": "面向 ESP32 的轻量 agent 实现，支持定时任务、GPIO、持久记忆与工具组合。",
+        "whatItClaims": "默认构建目标是全固件 <= 888KiB（包含运行时与网络/TLS开销）。",
+        "whereItShines": "适合极低资源硬件、边缘设备和硬件控制场景。",
+        "limitations": "生态和通用扩展性不如桌面/云端方案，硬件调试门槛更高。",
+        "editorialTake": "如果你要把 agent 真正放进 ESP32，zclaw 是很值得跟踪的路线。",
+        "tags": [
+          "c",
+          "esp32",
+          "embedded"
+        ]
+      },
+      "en": {
+        "name": "zclaw",
+        "summary": "A C-based ultra-small OpenClaw-style assistant targeting ESP32 hardware.",
+        "whatItIs": "A lightweight ESP32 agent with scheduling, GPIO control, persistent memory, and tool composition.",
+        "whatItClaims": "Targets an all-in default firmware budget of <= 888KiB (including runtime and network/TLS overhead).",
+        "whereItShines": "Strong fit for constrained edge boards and hardware-control use cases.",
+        "limitations": "Hardware-centric workflow and smaller ecosystem compared with desktop/cloud-first stacks.",
+        "editorialTake": "A serious option if your goal is putting an agent directly on ESP32-class devices.",
+        "tags": [
+          "c",
+          "esp32",
+          "embedded"
+        ]
+      },
+      "ja": {
+        "name": "zclaw",
+        "summary": "ESP32 向けを狙った C 製の超小型 OpenClaw 系アシスタントです。",
+        "whatItIs": "スケジュール実行、GPIO 制御、永続メモリ、ツール合成を備えた軽量エージェントです。",
+        "whatItClaims": "デフォルト構成で全体ファームウェア <= 888KiB を目標にしています。",
+        "whereItShines": "低リソースのエッジ機器やハード連携用途に向いています。",
+        "limitations": "ハードウェア前提のため運用難易度は高く、汎用エコシステムはまだ小さめです。",
+        "editorialTake": "ESP32 上で実用的に動かす方向では注目度の高い実装です。",
+        "tags": [
+          "c",
+          "esp32",
+          "embedded"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/tnm/zclaw",
+      "https://x.com/tnm",
+      "https://zclaw.dev"
+    ],
+    "updatedAt": "2026-02-22"
+  },
+  {
+    "id": "variant-lobsterai",
+    "slug": "lobsterai",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "website": "https://lobsterai.youdao.com",
+      "github": "https://github.com/netease-youdao/LobsterAI",
+      "x": "https://x.com/fun000001"
+    },
+    "metrics": {
+      "stars": 1556,
+      "footprint": "TypeScript + Electron desktop agent stack"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "LobsterAI",
+        "summary": "网易有道开源的全场景个人助手 Agent，强调 24/7 持续执行。",
+        "whatItIs": "一个基于 TypeScript/Electron 的桌面端 agent 系统，支持本地或沙箱执行与多 IM 通道接入。",
+        "whatItClaims": "强调全场景任务处理、持久记忆、定时任务、权限门控和跨平台桌面能力。",
+        "whereItShines": "适合希望把 agent 用作日常生产力中枢，并结合桌面端文件与工具流的用户。",
+        "limitations": "桌面栈相对更重，硬件与运行时开销高于极轻量二进制路线。",
+        "editorialTake": "更偏产品化完整体验，不是极小体积方向，而是功能覆盖优先。",
+        "tags": [
+          "typescript",
+          "electron",
+          "desktop"
+        ]
+      },
+      "en": {
+        "name": "LobsterAI",
+        "summary": "An all-scenario personal assistant agent from NetEase Youdao with 24/7 positioning.",
+        "whatItIs": "A TypeScript/Electron desktop agent supporting local or sandbox execution and multi-IM integrations.",
+        "whatItClaims": "Promotes broad task coverage, persistent memory, scheduled tasks, permission gating, and cross-platform desktop support.",
+        "whereItShines": "Great for users who want a full-featured desktop productivity agent with integrated tool workflows.",
+        "limitations": "Desktop runtime is heavier than ultra-light binary-first implementations.",
+        "editorialTake": "A productized, feature-rich direction that prioritizes coverage over minimal footprint.",
+        "tags": [
+          "typescript",
+          "electron",
+          "desktop"
+        ]
+      },
+      "ja": {
+        "name": "LobsterAI",
+        "summary": "NetEase Youdao による 24/7 指向の総合パーソナルアシスタント Agent です。",
+        "whatItIs": "TypeScript/Electron ベースのデスクトップ agent で、ローカル実行とサンドボックス実行、複数 IM 連携を備えます。",
+        "whatItClaims": "幅広い業務タスク対応、永続メモリ、スケジュール実行、権限承認、クロスプラットフォーム対応を訴求します。",
+        "whereItShines": "日常業務の生産性ワークフローをデスクトップ中心に統合したい用途に向いています。",
+        "limitations": "デスクトップ実行基盤のため、超軽量バイナリ路線より実行コストは高めです。",
+        "editorialTake": "極小化よりも機能網羅と実用性を重視したプロダクト寄りの方向です。",
+        "tags": [
+          "typescript",
+          "electron",
+          "desktop"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/netease-youdao/LobsterAI",
+      "https://x.com/fun000001",
+      "https://lobsterai.youdao.com"
+    ],
+    "updatedAt": "2026-02-22"
   }
 ]

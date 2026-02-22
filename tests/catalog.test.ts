@@ -80,6 +80,8 @@ describe('catalog helpers', () => {
     expect(slugs.has('clawlet')).toBe(true);
     expect(slugs.has('nullclaw')).toBe(true);
     expect(slugs.has('mistermorph')).toBe(true);
+    expect(slugs.has('zclaw')).toBe(true);
+    expect(slugs.has('lobsterai')).toBe(true);
   });
 
   it('builds project static paths across locales and slugs', () => {
