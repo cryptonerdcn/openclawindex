@@ -17,9 +17,6 @@ Open issue `Submit Claw Entry` and fill schema-aligned fields.
 2. Quick suggestion issue
 Open issue `Quick Project Suggestion` with minimal details; maintainers can follow up.
 
-3. Direct JSON PR (advanced)
-Open a PR and edit `src/data/catalog.json` directly. You can still use `.github/pull_request_template.md`.
-
 ## Data Requirements (Schema-aligned)
 
 Every entry must include:
