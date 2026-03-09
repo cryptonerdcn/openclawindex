@@ -4,20 +4,21 @@
 
 Want your Claw variant or related ecosystem service included?
 
-Use the PR template:
+Use GitHub Issues first:
 
-- `.github/pull_request_template.md`
+- `.github/ISSUE_TEMPLATE/submit-claw-entry.yml`
+- `.github/ISSUE_TEMPLATE/suggest-project.md`
 
 ### Available submission methods
 
-1. Direct JSON PR (recommended)
-Edit `src/data/catalog.json` and include the full entry.
+1. Structured Issue form (recommended)
+Open issue `Submit Claw Entry` and fill schema-aligned fields.
 
-2. Assisted entry PR
-Open a PR and fill the template fields without editing JSON; maintainers can add the entry for you.
+2. Quick suggestion issue
+Open issue `Quick Project Suggestion` with minimal details; maintainers can follow up.
 
-3. Template specialization (maintainers)
-If needed, add more PR templates under `.github/PULL_REQUEST_TEMPLATE/` for different contributor flows.
+3. Direct JSON PR (advanced)
+Open a PR and edit `src/data/catalog.json` directly. You can still use `.github/pull_request_template.md`.
 
 ## Data Requirements (Schema-aligned)
 

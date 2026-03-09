@@ -43,7 +43,7 @@ npx astro check
 
 ## Contribution
 
-See `CONTRIBUTING.md` and use `.github/pull_request_template.md` when submitting new claw variants/services.
+See `CONTRIBUTING.md` and submit new entries via GitHub Issue templates under `.github/ISSUE_TEMPLATE/`.
 
 ## Deployment
 

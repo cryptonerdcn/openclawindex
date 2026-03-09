@@ -1,0 +1,237 @@
+name: Submit Claw Entry
+description: Request inclusion for a claw variant or related ecosystem service.
+title: "[Intake] <project-name>"
+labels:
+  - intake
+  - catalog
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to submit a new entry for `src/data/catalog.json`.
+        Required locales are `zh-CN`, `en`, and `ja`.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: kind
+      description: Entry type in catalog schema.
+      options:
+        - variant
+        - service
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: category
+      description: Catalog category enum.
+      options:
+        - Rewrites
+        - Security
+        - Infrastructure
+        - Hosting
+        - DesktopHardware
+        - Ecosystem
+        - SatireFake
+    validations:
+      required: true
+
+  - type: input
+    id: id
+    attributes:
+      label: id
+      description: Stable id, e.g. variant-yourclaw or service-yourclaw.
+      placeholder: variant-yourclaw
+    validations:
+      required: true
+
+  - type: input
+    id: slug
+    attributes:
+      label: slug
+      description: Stable lowercase kebab-case slug.
+      placeholder: yourclaw
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### links (at least one is required)"
+
+  - type: input
+    id: links_website
+    attributes:
+      label: links.website
+      placeholder: https://example.com
+    validations:
+      required: false
+
+  - type: input
+    id: links_github
+    attributes:
+      label: links.github
+      placeholder: https://github.com/org/repo
+    validations:
+      required: false
+
+  - type: input
+    id: links_x
+    attributes:
+      label: links.x
+      placeholder: https://x.com/handle
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "### metrics (optional)"
+
+  - type: input
+    id: metrics_stars
+    attributes:
+      label: metrics.stars
+      description: Integer, optional.
+      placeholder: "1234"
+    validations:
+      required: false
+
+  - type: input
+    id: metrics_claimed_speedup
+    attributes:
+      label: metrics.claimedSpeedup
+      placeholder: up to 10x in benchmark X
+    validations:
+      required: false
+
+  - type: input
+    id: metrics_footprint
+    attributes:
+      label: metrics.footprint
+      placeholder: single binary under 10MB
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "### locales.zh-CN"
+
+  - type: textarea
+    id: locale_zh_cn
+    attributes:
+      label: locales.zh-CN
+      description: Provide name/summary/whatItIs/whatItClaims/whereItShines/limitations/editorialTake/tags.
+      value: |
+        name:
+        summary:
+        whatItIs:
+        whatItClaims:
+        whereItShines:
+        limitations:
+        editorialTake:
+        tags:
+          - tag1
+          - tag2
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### locales.en"
+
+  - type: textarea
+    id: locale_en
+    attributes:
+      label: locales.en
+      description: Provide name/summary/whatItIs/whatItClaims/whereItShines/limitations/editorialTake/tags.
+      value: |
+        name:
+        summary:
+        whatItIs:
+        whatItClaims:
+        whereItShines:
+        limitations:
+        editorialTake:
+        tags:
+          - tag1
+          - tag2
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### locales.ja"
+
+  - type: textarea
+    id: locale_ja
+    attributes:
+      label: locales.ja
+      description: Provide name/summary/whatItIs/whatItClaims/whereItShines/limitations/editorialTake/tags.
+      value: |
+        name:
+        summary:
+        whatItIs:
+        whatItClaims:
+        whereItShines:
+        limitations:
+        editorialTake:
+        tags:
+          - tag1
+          - tag2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stance_recommendation
+    attributes:
+      label: stance.recommendation
+      options:
+        - recommended
+        - neutral
+        - not_recommended
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stance_confidence
+    attributes:
+      label: stance.confidence
+      options:
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: evidence
+      description: One URL per line, at least one required.
+      placeholder: |
+        https://example.com
+        https://github.com/org/repo
+        https://x.com/handle/status/123
+    validations:
+      required: true
+
+  - type: input
+    id: updated_at
+    attributes:
+      label: updatedAt
+      description: ISO date in YYYY-MM-DD format.
+      placeholder: "2026-03-10"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: validation checks
+      options:
+        - label: I confirm required fields are filled and links are reachable.
+          required: true
+        - label: I confirm locale content is provided for zh-CN, en, and ja.
+          required: true
