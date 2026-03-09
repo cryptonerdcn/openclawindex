@@ -11,6 +11,7 @@ body:
       value: |
         Use this form to submit a new entry for `src/data/catalog.json`.
         Required locales are `zh-CN`, `en`, and `ja`.
+        `metrics`, `stance`, `evidence`, and `updatedAt` are maintained by maintainers.
 
   - type: dropdown
     id: kind
@@ -87,35 +88,6 @@ body:
 
   - type: markdown
     attributes:
-      value: "### metrics (optional)"
-
-  - type: input
-    id: metrics_stars
-    attributes:
-      label: metrics.stars
-      description: Integer, optional.
-      placeholder: "1234"
-    validations:
-      required: false
-
-  - type: input
-    id: metrics_claimed_speedup
-    attributes:
-      label: metrics.claimedSpeedup
-      placeholder: up to 10x in benchmark X
-    validations:
-      required: false
-
-  - type: input
-    id: metrics_footprint
-    attributes:
-      label: metrics.footprint
-      placeholder: single binary under 10MB
-    validations:
-      required: false
-
-  - type: markdown
-    attributes:
       value: "### locales.zh-CN"
 
   - type: textarea
@@ -180,49 +152,6 @@ body:
         tags:
           - tag1
           - tag2
-    validations:
-      required: true
-
-  - type: dropdown
-    id: stance_recommendation
-    attributes:
-      label: stance.recommendation
-      options:
-        - recommended
-        - neutral
-        - not_recommended
-    validations:
-      required: true
-
-  - type: dropdown
-    id: stance_confidence
-    attributes:
-      label: stance.confidence
-      options:
-        - high
-        - medium
-        - low
-    validations:
-      required: true
-
-  - type: textarea
-    id: evidence
-    attributes:
-      label: evidence
-      description: One URL per line, at least one required.
-      placeholder: |
-        https://example.com
-        https://github.com/org/repo
-        https://x.com/handle/status/123
-    validations:
-      required: true
-
-  - type: input
-    id: updated_at
-    attributes:
-      label: updatedAt
-      description: ISO date in YYYY-MM-DD format.
-      placeholder: "2026-03-10"
     validations:
       required: true
 

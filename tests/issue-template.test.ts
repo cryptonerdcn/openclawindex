@@ -22,8 +22,10 @@ describe('Issue templates for catalog intake', () => {
     expect(content).toContain('category');
     expect(content).toContain('links');
     expect(content).toContain('locales');
-    expect(content).toContain('stance');
-    expect(content).toContain('evidence');
-    expect(content).toContain('updatedAt');
+    expect(content).not.toContain('metrics_stars');
+    expect(content).not.toContain('stance_recommendation');
+    expect(content).not.toContain('stance_confidence');
+    expect(content).not.toContain('id: evidence');
+    expect(content).not.toContain('label: updatedAt');
   });
 });
