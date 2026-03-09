@@ -1411,5 +1411,138 @@
       "https://lobsterai.youdao.com"
     ],
     "updatedAt": "2026-02-22"
+  },
+  {
+    "id": "service-miclaw",
+    "slug": "miclaw",
+    "kind": "service",
+    "category": "Ecosystem",
+    "links": {
+      "website": "https://technode.com/2026/03/06/xiaomi-begins-limited-closed-beta-of-openclaw-like-mobile-ai-agent-xiaomi-miclaw/",
+      "x": "https://x.com/Xiaomi"
+    },
+    "metrics": {
+      "footprint": "reported Xiaomi MiMo-backed mobile agent closed beta (Xiaomi 17 first wave)"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "MiClaw",
+        "summary": "小米生态中的移动端 OpenClaw 风格 agent 封测项目。",
+        "whatItIs": "据公开报道，MiClaw 是小米基于 MiMo 推进的小范围邀请制封测，首批面向小米 17 系列。",
+        "whatItClaims": "主打手机端 agent 体验与设备级协同，强调云端模型结合终端能力。",
+        "whereItShines": "如果你关注手机原生 agent 入口和厂商生态整合，这条线值得持续跟踪。",
+        "limitations": "当前公开技术细节有限，未见独立开源仓库与完整文档。",
+        "editorialTake": "先按生态信号观察，不应视为可立即替代的开源运行时。",
+        "tags": [
+          "mobile",
+          "xiaomi",
+          "closed-beta"
+        ]
+      },
+      "en": {
+        "name": "MiClaw",
+        "summary": "A Xiaomi ecosystem mobile agent effort with OpenClaw-like positioning in limited beta.",
+        "whatItIs": "Public reports describe MiClaw as a MiMo-backed invite-only closed beta, initially for Xiaomi 17 series users.",
+        "whatItClaims": "Positions around native mobile agent UX and tighter cloud-device coordination.",
+        "whereItShines": "Worth tracking if your focus is handset-native agent entry points in vendor ecosystems.",
+        "limitations": "Public technical detail is still sparse, with no standalone open-source repo or full docs.",
+        "editorialTake": "Treat it as an ecosystem signal for now, not as a ready open runtime replacement.",
+        "tags": [
+          "mobile",
+          "xiaomi",
+          "closed-beta"
+        ]
+      },
+      "ja": {
+        "name": "MiClaw",
+        "summary": "Xiaomi エコシステムにおけるモバイル向け OpenClaw 系ポジションのクローズドベータ案件です。",
+        "whatItIs": "公開報道では、MiClaw は MiMo を基盤とした招待制の小規模ベータで、初期対象は Xiaomi 17 シリーズです。",
+        "whatItClaims": "モバイルネイティブな agent 体験とクラウド-端末連携を訴求しています。",
+        "whereItShines": "端末ネイティブの agent 入口とメーカー統合を重視する場合に追跡価値があります。",
+        "limitations": "公開技術情報はまだ少なく、独立した OSS リポジトリや詳細ドキュメントは未確認です。",
+        "editorialTake": "現時点では実装基盤というより、エコシステム動向として扱うのが妥当です。",
+        "tags": [
+          "mobile",
+          "xiaomi",
+          "closed-beta"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "neutral",
+      "confidence": "low"
+    },
+    "evidence": [
+      "https://technode.com/2026/03/06/xiaomi-begins-limited-closed-beta-of-openclaw-like-mobile-ai-agent-xiaomi-miclaw/",
+      "https://finance.sina.com.cn/roll/2026-03-06/doc-inhpzzup2510165.shtml"
+    ],
+    "updatedAt": "2026-03-09"
+  },
+  {
+    "id": "service-qclaw",
+    "slug": "qclaw",
+    "kind": "service",
+    "category": "Ecosystem",
+    "links": {
+      "website": "https://www.ithome.com/0/927/143.htm",
+      "x": "https://x.com/TencentGlobal"
+    },
+    "metrics": {
+      "footprint": "reported Tencent internal beta for one-click OpenClaw-style startup package"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "QClaw",
+        "summary": "腾讯侧传出的 OpenClaw 一键启动包内测项（官方命名待确认）。",
+        "whatItIs": "多家媒体称腾讯在内测 QClaw，定位为 OpenClaw 风格的一键启动方案。",
+        "whatItClaims": "强调降低部署门槛并打通腾讯云与 QQ/企业微信等生态连接能力。",
+        "whereItShines": "若你的业务已在腾讯云体系内，可能具备更快的接入路径。",
+        "limitations": "目前更多是媒体与社区口径，官方正式产品页与稳定命名尚未明确。",
+        "editorialTake": "建议以观察项收录，等待腾讯官方进一步确认后再上调确定性。",
+        "tags": [
+          "tencent",
+          "deployment",
+          "watchlist"
+        ]
+      },
+      "en": {
+        "name": "QClaw",
+        "summary": "A reportedly Tencent-internal one-click OpenClaw-style package (official naming still unconfirmed).",
+        "whatItIs": "Multiple media reports describe QClaw as an internal beta effort for simplified OpenClaw-like startup flows.",
+        "whatItClaims": "Narrative centers on easier deployment and tighter Tencent Cloud plus QQ/WeCom ecosystem integration.",
+        "whereItShines": "Potentially useful for teams already operating inside Tencent Cloud infrastructure.",
+        "limitations": "Current visibility is mostly media/community reporting; official product naming and docs remain limited.",
+        "editorialTake": "Keep this in watchlist mode until Tencent publishes a formal product statement.",
+        "tags": [
+          "tencent",
+          "deployment",
+          "watchlist"
+        ]
+      },
+      "ja": {
+        "name": "QClaw",
+        "summary": "Tencent 内部ベータとされる OpenClaw 系ワンクリック起動パッケージ（正式名称は未確定）です。",
+        "whatItIs": "複数報道では、QClaw は OpenClaw 風ワークフローを簡易化する内測案件として扱われています。",
+        "whatItClaims": "導入ハードルの低減と Tencent Cloud・QQ・企業微信との連携を訴求します。",
+        "whereItShines": "Tencent Cloud 前提のチームには導入経路の短縮メリットが見込まれます。",
+        "limitations": "現段階では報道・コミュニティ情報が中心で、公式な製品ページや命名は十分確認できません。",
+        "editorialTake": "現時点は watchlist 扱いで保持し、公式発表後に確度を更新するのが安全です。",
+        "tags": [
+          "tencent",
+          "deployment",
+          "watchlist"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "neutral",
+      "confidence": "low"
+    },
+    "evidence": [
+      "https://www.ithome.com/0/927/143.htm",
+      "https://finance.sina.com.cn/tech/digi/2026-03-09/doc-inhqkhiq9935494.shtml",
+      "https://cloud.tencent.com/developer/video/85148"
+    ],
+    "updatedAt": "2026-03-09"
   }
 ]
