@@ -41,6 +41,10 @@ npm run build
 npx astro check
 ```
 
+## Contribution
+
+See `CONTRIBUTING.md` and use `.github/pull_request_template.md` when submitting new claw variants/services.
+
 ## Deployment
 
 ### GitHub Auto Deploy to Cloudflare Pages
