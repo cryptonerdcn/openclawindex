@@ -1,66 +1,37 @@
 # OpenClawIndex
 
-Multilingual static directory for OpenClaw variants and related services.
+A multilingual directory for OpenClaw variants and ecosystem projects.
 
-## Features
+[中文说明 / Chinese README](./README_CN.md)
 
-- Static Astro site (no backend runtime)
-- Locales: `zh-CN`, `en`, `ja`
-- Dual reading layer: `Facts` and `Opinions`
-- Data-driven catalog from `src/data/catalog.json`
-- Typed schema validation with Zod
-- Dynamic static routes for:
-  - `/[locale]/variants`
-  - `/[locale]/services`
-  - `/[locale]/project/[slug]`
-  - `/[locale]/methodology`
-  - `/[locale]/changelog`
+## What This Site Is
 
-## Content Model
+OpenClawIndex helps people quickly discover and compare OpenClaw-related projects, including:
 
-Core types and schema live in:
+- variant implementations (such as rewrites in different languages)
+- ecosystem services (tools, platforms, distribution and integration projects)
+- core project info, links, and multilingual descriptions
 
-- `src/types/catalog.ts`
-- `src/data/catalog.json`
-- `src/i18n/messages/*.json`
+The goal is to complete discovery, filtering, comparison, and navigation in one place.
 
-## Development
+## User-Facing Strengths
 
-```bash
-npm install
-npm run dev
-```
+- Single-page directory experience: no constant jumping across pages.
+- Fast language switching: `EN / 中 / 日` with stable reading context.
+- Facts / Opinions dual-layer reading: neutral facts first, editorial view second.
+- Unified project cards: easier side-by-side comparison.
+- Practical filtering and search: locate projects by category and keywords quickly.
 
-Open <http://localhost:4321>.
+## How To Contribute
 
-## Verification
+Submit inclusion requests via GitHub Issues:
 
-```bash
-npm test
-npm run build
-npx astro check
-```
+1. `Submit Claw Entry` (recommended): structured form for complete submissions.
+2. `Quick Project Suggestion`: lightweight nomination for early leads.
 
-## Contribution
+Issue templates: `.github/ISSUE_TEMPLATE/`  
+Details: `CONTRIBUTING.md`
 
-See `CONTRIBUTING.md` and submit new entries via GitHub Issue templates under `.github/ISSUE_TEMPLATE/`.
+## License
 
-## Deployment
-
-### GitHub Auto Deploy to Cloudflare Pages
-
-Pushes to `main` trigger `.github/workflows/deploy-cloudflare-pages.yml`.
-
-Required GitHub repository secrets:
-
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
-
-Once secrets are configured, every commit to `main` is built and deployed to Cloudflare Pages project `openclawindex`.
-
-### Manual Deploy
-
-```bash
-npm run build
-npx wrangler pages deploy dist --project-name openclawindex --branch main
-```
+This project is licensed under the MIT License. See `LICENSE` for details.
