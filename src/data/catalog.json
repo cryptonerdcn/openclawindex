@@ -9,7 +9,7 @@
       "x": "https://x.com/xubinrencs"
     },
     "metrics": {
-      "stars": 21118,
+      "stars": 36951,
       "footprint": "Python lightweight runtime"
     },
     "locales": {
@@ -77,7 +77,7 @@
       "x": "https://x.com/SipeedIO"
     },
     "metrics": {
-      "stars": 15106,
+      "stars": 26716,
       "claimedSpeedup": "claims 30x vs Nanobot and 500x vs OpenClaw",
       "footprint": "claims 10x smaller vs Nanobot"
     },
@@ -141,11 +141,9 @@
     "kind": "variant",
     "category": "Rewrites",
     "links": {
-      "github": "https://github.com/zeroclaw-labs/zeroclaw",
       "x": "https://x.com/argenistherose"
     },
     "metrics": {
-      "stars": 11248,
       "claimedSpeedup": "positions itself as smaller and faster than PicoClaw",
       "footprint": "Rust native binary"
     },
@@ -156,8 +154,8 @@
         "whatItIs": "由 Argenis 团队推进的 Rust 重写，定位性能和稳定性优先。",
         "whatItClaims": "对外强调比 PicoClaw 进一步缩小体积并提升性能。",
         "whereItShines": "适合希望把运行时开销压到更低的系统型工程团队。",
-        "limitations": "功能可用性和生态广度需要按具体版本核对。",
-        "editorialTake": "性能党值得重点关注，但要先做兼容性清单。",
+        "limitations": "原公开 GitHub 仓库目前返回 404，代码获取路径和持续维护状态需要重新确认。",
+        "editorialTake": "技术方向仍有吸引力，但在公开仓库恢复前更适合当作观察项而不是立即落地。",
         "tags": [
           "rust",
           "performance",
@@ -170,8 +168,8 @@
         "whatItIs": "A performance-first OpenClaw-style implementation in Rust.",
         "whatItClaims": "Promotes better speed and size characteristics than PicoClaw.",
         "whereItShines": "Useful where low runtime overhead and binary predictability matter.",
-        "limitations": "Feature parity and integration breadth should be verified per release.",
-        "editorialTake": "Promising for performance, but validate compatibility early.",
+        "limitations": "The original public GitHub repository currently returns 404, so code availability and maintenance status need re-verification.",
+        "editorialTake": "Still interesting on paper, but treat it as watchlist material until a live public code source returns.",
         "tags": [
           "rust",
           "performance",
@@ -184,8 +182,8 @@
         "whatItIs": "性能優先で設計された OpenClaw 系の再実装です。",
         "whatItClaims": "PicoClaw より小さく速いことを主張しています。",
         "whereItShines": "ランタイムコストを抑えたい本番用途に適しています。",
-        "limitations": "機能網羅性はバージョンごとの確認が必要です。",
-        "editorialTake": "性能面の期待値は高いが、導入前の検証は必須です。",
+        "limitations": "元の公開 GitHub リポジトリが現在 404 のため、コード入手性と継続開発状況の再確認が必要です。",
+        "editorialTake": "方向性は魅力的ですが、公開コードが戻るまでは watchlist 扱いが妥当です。",
         "tags": [
           "rust",
           "performance",
@@ -194,14 +192,13 @@
       }
     },
     "stance": {
-      "recommendation": "recommended",
-      "confidence": "medium"
+      "recommendation": "neutral",
+      "confidence": "low"
     },
     "evidence": [
-      "https://github.com/zeroclaw-labs/zeroclaw",
       "https://x.com/argenistherose"
     ],
-    "updatedAt": "2026-02-18"
+    "updatedAt": "2026-03-30"
   },
   {
     "id": "variant-nanoclaw",
@@ -213,7 +210,7 @@
       "x": "https://x.com/Gavriel_Cohen"
     },
     "metrics": {
-      "stars": 9203,
+      "stars": 25918,
       "footprint": "small TypeScript codebase"
     },
     "locales": {
@@ -281,7 +278,7 @@
     },
     "metrics": {
       "footprint": "WASM sandbox with PostgreSQL memory",
-      "stars": 2217
+      "stars": 11100
     },
     "locales": {
       "zh-CN": {
@@ -348,7 +345,7 @@
     },
     "metrics": {
       "footprint": "shell script and external tools",
-      "stars": 2074
+      "stars": 3426
     },
     "locales": {
       "zh-CN": {
@@ -414,7 +411,7 @@
       "x": "https://x.com/zudasworld"
     },
     "metrics": {
-      "stars": 54,
+      "stars": 119,
       "footprint": "no LLM, deterministic pipeline"
     },
     "locales": {
@@ -480,7 +477,7 @@
       "github": "https://github.com/ComposioHQ/secure-openclaw"
     },
     "metrics": {
-      "stars": 1500
+      "stars": 1317
     },
     "locales": {
       "zh-CN": {
@@ -544,7 +541,7 @@
       "github": "https://github.com/BlockRunAI/ClawRouter"
     },
     "metrics": {
-      "stars": 2700
+      "stars": 6532
     },
     "locales": {
       "zh-CN": {
@@ -609,7 +606,7 @@
       "x": "https://x.com/archestra_ai"
     },
     "metrics": {
-      "stars": 3500
+      "stars": 3536
     },
     "locales": {
       "zh-CN": {
@@ -740,7 +737,7 @@
       "github": "https://github.com/sseanliu/VisionClaw"
     },
     "metrics": {
-      "stars": 993
+      "stars": 1958
     },
     "locales": {
       "zh-CN": {
@@ -805,7 +802,7 @@
       "x": "https://x.com/benrzy"
     },
     "metrics": {
-      "stars": 249
+      "stars": 630
     },
     "locales": {
       "zh-CN": {
@@ -872,7 +869,7 @@
       "x": "https://x.com/ssslvky"
     },
     "metrics": {
-      "stars": 2366,
+      "stars": 4920,
       "claimedSpeedup": "positions itself as smaller, local-first, and smarter than PicoClaw",
       "footprint": "pure C implementation with $5 chip (ESP32-S3 class) claim; Telegram-only"
     },
@@ -932,6 +929,73 @@
     "updatedAt": "2026-02-18"
   },
   {
+    "id": "variant-moltis",
+    "slug": "moltis",
+    "kind": "variant",
+    "category": "Rewrites",
+    "links": {
+      "website": "https://moltis.org",
+      "github": "https://github.com/moltis-org/moltis"
+    },
+    "metrics": {
+      "stars": 2404,
+      "footprint": "Rust native single binary with sandboxing, memory, MCP tools, and multi-channel support"
+    },
+    "locales": {
+      "zh-CN": {
+        "name": "Moltis",
+        "summary": "Rust 原生的单二进制 claw 实现，强调安全、审计性和多通道能力。",
+        "whatItIs": "一个主打 Rust 原生、可审计、带沙箱能力的 OpenClaw 风格实现，内置语音、记忆、MCP 工具与多渠道接入。",
+        "whatItClaims": "官方强调 one binary、sandboxed、secure、auditable，并把语音和记忆能力作为默认能力。",
+        "whereItShines": "适合在意运行时隔离、安全默认值和较完整内建能力的工程团队。",
+        "limitations": "项目仍较新，真实生产稳定性和跨场景兼容性需要继续观察。",
+        "editorialTake": "如果你想要 Rust 路线但又不只追求极限小体积，Moltis 是一条更偏完整产品面的实现。",
+        "tags": [
+          "rust",
+          "security",
+          "single-binary"
+        ]
+      },
+      "en": {
+        "name": "Moltis",
+        "summary": "A Rust-native single-binary claw focused on security, auditability, and built-in capabilities.",
+        "whatItIs": "A Rust-native OpenClaw-style implementation with sandboxing, memory, voice, MCP tools, and multi-channel access built in.",
+        "whatItClaims": "Markets itself around one-binary deployment, sandboxed execution, stronger security defaults, and auditable behavior.",
+        "whereItShines": "Best suited for teams that care about runtime isolation, secure defaults, and a fuller built-in feature set.",
+        "limitations": "Still relatively new, so real production durability and compatibility breadth need ongoing validation.",
+        "editorialTake": "A stronger fit when you want a Rust claw with more complete product surface, not just minimal footprint bragging rights.",
+        "tags": [
+          "rust",
+          "security",
+          "single-binary"
+        ]
+      },
+      "ja": {
+        "name": "Moltis",
+        "summary": "安全性、監査性、内蔵機能を重視した Rust ネイティブの単一バイナリ claw 実装です。",
+        "whatItIs": "サンドボックス、メモリ、音声、MCP ツール、複数チャネル対応を内蔵した Rust 製 OpenClaw 系実装です。",
+        "whatItClaims": "one binary、sandboxed、secure、auditable を前面に出し、音声と記憶も標準搭載としています。",
+        "whereItShines": "ランタイム分離、安全デフォルト、比較的完成度の高い内蔵機能を重視するチームに向いています。",
+        "limitations": "まだ新しいため、本番耐久性やシナリオごとの互換性は継続検証が必要です。",
+        "editorialTake": "極小サイズ競争より、より完成度の高い Rust claw を求める場合に注目すべき実装です。",
+        "tags": [
+          "rust",
+          "security",
+          "single-binary"
+        ]
+      }
+    },
+    "stance": {
+      "recommendation": "recommended",
+      "confidence": "medium"
+    },
+    "evidence": [
+      "https://github.com/moltis-org/moltis",
+      "https://moltis.org"
+    ],
+    "updatedAt": "2026-03-30"
+  },
+  {
     "id": "service-moltbook",
     "slug": "moltbook",
     "kind": "service",
@@ -942,7 +1006,7 @@
       "x": "https://x.com/mattprd"
     },
     "metrics": {
-      "stars": 105,
+      "stars": 132,
       "footprint": "cloud social/distribution platform for AI agents"
     },
     "locales": {
@@ -1011,7 +1075,7 @@
       "x": "https://x.com/Kimi_Moonshot"
     },
     "metrics": {
-      "stars": 10382,
+      "stars": 10572,
       "footprint": "cloud-hosted assistant workflow; no built-in proxy routing"
     },
     "locales": {
@@ -1078,7 +1142,7 @@
       "github": "https://github.com/mosaxiv/clawlet"
     },
     "metrics": {
-      "stars": 659,
+      "stars": 661,
       "footprint": "single binary, no CGO/runtime/dependencies"
     },
     "locales": {
@@ -1146,7 +1210,7 @@
       "x": "https://x.com/jedisct1"
     },
     "metrics": {
-      "stars": 386,
+      "stars": 6923,
       "claimedSpeedup": "claims 678 KB binary, ~1 MB RAM, and sub-2 ms boot on modern hardware",
       "footprint": "Zig static binary, positioned for ~$5 boards"
     },
@@ -1216,7 +1280,7 @@
       "x": "https://x.com/lyricwai"
     },
     "metrics": {
-      "stars": 28,
+      "stars": 61,
       "footprint": "Unified Agent CLI with reusable Go core"
     },
     "locales": {
@@ -1285,7 +1349,7 @@
       "x": "https://x.com/tnm"
     },
     "metrics": {
-      "stars": 548,
+      "stars": 2027,
       "footprint": "<= 888 KiB all-in firmware target on ESP32"
     },
     "locales": {
@@ -1354,7 +1418,7 @@
       "x": "https://x.com/fun000001"
     },
     "metrics": {
-      "stars": 1556,
+      "stars": 4728,
       "footprint": "TypeScript + Electron desktop agent stack"
     },
     "locales": {

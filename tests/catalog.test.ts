@@ -74,6 +74,7 @@ describe('catalog helpers', () => {
   it('includes newly curated projects', () => {
     const allItems = getAllCatalog();
     const slugs = new Set(allItems.map((item) => item.slug));
+    expect(slugs.has('moltis')).toBe(true);
     expect(slugs.has('moltbook')).toBe(true);
     expect(slugs.has('mimiclaw')).toBe(true);
     expect(slugs.has('kimiclaw')).toBe(true);
@@ -82,6 +83,12 @@ describe('catalog helpers', () => {
     expect(slugs.has('mistermorph')).toBe(true);
     expect(slugs.has('zclaw')).toBe(true);
     expect(slugs.has('lobsterai')).toBe(true);
+  });
+
+  it('does not expose dead GitHub links for zeroclaw', () => {
+    const item = getAllCatalog().find((entry) => entry.slug === 'zeroclaw');
+    expect(item).toBeDefined();
+    expect(item?.links.github).toBeUndefined();
   });
 
   it('builds project static paths across locales and slugs', () => {
